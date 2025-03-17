@@ -5,19 +5,46 @@
     "logo": "/images/logo.png",
     "logo_alt": "Logo alt",
     "description": "Nail Lab nail salon in Raleigh, NC 27615 is a premier destination for those seeking top-quality nail services in a chic and relaxing environment. Whether one desires a classic French manicure or wants to experiment with bold nail designs, Nail Lab in Raleigh, NC 27615ensures every individual leaves feeling rejuvenated with stunningly beautiful nails.",
+    "social": [
+      {
+        "icon_name": "/images/facebook-svgrepo-com.svg",
+        "is_new_tab": true,
+        "link": "https://www.facebook.com"
+      },
+      {
+        "icon_name": "/images/facebook-svgrepo-com.svg",
+        "is_new_tab": true,
+        "link": "https://www.facebook.com"
+      },
+      {
+        "icon_name": "/images/facebook-svgrepo-com.svg",
+        "is_new_tab": true,
+        "link": "https://www.facebook.com"
+      },
+      {
+        "icon_name": "/images/facebook-svgrepo-com.svg",
+        "is_new_tab": true,
+        "link": "https://www.facebook.com"
+      },
+      {
+        "icon_name": "/images/facebook-svgrepo-com.svg",
+        "is_new_tab": true,
+        "link": "https://www.facebook.com"
+      }
+    ],
     "contact": [
       {
         "is_show": true,
         "label": "Contact Us",
         "list_items": [
-          { "title": "(919) 336-9999", "icon_name": "i-ic-baseline-phone" },
+          { "title": "(919) 336-9999", "icon_name": "/images/phone-504.svg" },
           {
             "title": "naillabraleigh@icloud.com",
-            "icon_name": "i-ic-baseline-mail"
+            "icon_name": "/images/mail-2544.svg"
           },
           {
             "title": "9414 Falls of Neuse Rd Ste 100, Raleigh, NC 27615, United States",
-            "icon_name": "i-ic-baseline-location-on"
+            "icon_name": "/images/location-pointer-2961.svg"
           }
         ]
       },

@@ -13,21 +13,22 @@
               {{ footerData.description }}
             </p>
             <div class="social-links d-flex gap-2 mt-4">
-              <NuxtLink href="#" class="social-link">
-                <i class="bi bi-facebook"></i>
-              </NuxtLink>
-              <NuxtLink href="#" class="social-link">
-                <i class="bi bi-google"></i>
-              </NuxtLink>
-              <NuxtLink href="#" class="social-link"
-                ><i class="bi bi-instagram"></i>
-              </NuxtLink>
-              <NuxtLink href="#" class="social-link"
-                ><i class="bi bi-threads"></i>
-              </NuxtLink>
-              <NuxtLink href="#" class="social-link"
-                ><i class="bi bi-tiktok"></i>
-              </NuxtLink>
+              <div
+                v-for="(item, itemIndex) in footerData.social"
+                :key="itemIndex"
+              >
+                <NuxtLink
+                  :to="item?.link"
+                  :target="item?.is_new_tab ? '_blank' : '_self'"
+                  class="social-link"
+                >
+                  <img
+                    :src="item?.icon_name"
+                    alt="icon"
+                    style="height: 20px; width: 20px"
+                  />
+                </NuxtLink>
+              </div>
             </div>
           </div>
 
@@ -51,10 +52,11 @@
                       :to="item.link"
                       class="contact-link d-flex align-items-center gap-2"
                     >
-                      <Icon
-                        v-if="item.icon_name"
-                        :name="item.icon_name"
-                        class="flex-shrink-0"
+                      <img
+                        style="height: 20px; width: 20px"
+                        v-if="item?.icon_name"
+                        :src="item?.icon_name"
+                        alt="icon"
                       />
                       <span style="font-size: 14px">{{ item.title }}</span>
                     </NuxtLink>

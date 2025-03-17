@@ -25,13 +25,7 @@ export default defineNuxtConfig({
     '@/assets/style/main.scss',
   ],
 
-  modules: [
-    '@nuxt/content',
-    '@nuxt/image',
-    'nuxt-swiper',
-    '@pinia/nuxt',
-    '@nuxt/icon',
-  ],
+  modules: ['@nuxt/content', '@nuxt/image', 'nuxt-swiper', '@pinia/nuxt'],
 
   content: {
     documentDriven: true,
