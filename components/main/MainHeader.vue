@@ -42,24 +42,27 @@
         <div class="d-flex align-items-center gap-3">
           <!-- Mobile Menu Button -->
           <Button
+            :is_show="isMobileView"
             size="24"
-            :icon="
-              isMobileMenuOpen
-                ? 'i-system-uicons-cross'
-                : 'i-system-uicons-drag'
-            "
             class="menu-toggle phone-button d-lg-none d-block"
             @click="toggleMobileMenu"
             :class="{ 'is-active': isMobileMenuOpen }"
-          />
+          >
+            <i v-if="!isMobileMenuOpen" class="bi bi-list"></i>
+            <i v-else class="bi bi-x-lg"></i>
+          </Button>
 
           <Button
             :is_show="headerData.button.is_show"
-            icon="i-heroicons-phone-solid"
             color="white"
             :label="isMobileView ? '' : headerData.button.text"
             class="phone-button"
-          />
+          >
+            <i
+              style="font-size: 16px !important"
+              class="bi bi-telephone-fill"
+            ></i>
+          </Button>
         </div>
 
         <!-- Mobile Menu -->

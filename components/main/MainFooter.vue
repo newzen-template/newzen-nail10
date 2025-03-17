@@ -14,22 +14,19 @@
             </p>
             <div class="social-links d-flex gap-2 mt-4">
               <NuxtLink href="#" class="social-link">
-                <Icon size="24" name="i-ic-baseline-facebook" />
+                <i class="bi bi-facebook"></i>
               </NuxtLink>
               <NuxtLink href="#" class="social-link">
-                <Icon size="24" name="i-ic-baseline-facebook" />
+                <i class="bi bi-google"></i>
               </NuxtLink>
               <NuxtLink href="#" class="social-link"
-                ><Icon size="24" name="i-ic-baseline-facebook" />
+                ><i class="bi bi-instagram"></i>
               </NuxtLink>
               <NuxtLink href="#" class="social-link"
-                ><Icon size="24" name="i-ic-baseline-facebook" />
+                ><i class="bi bi-threads"></i>
               </NuxtLink>
               <NuxtLink href="#" class="social-link"
-                ><Icon size="24" name="i-ic-baseline-facebook" />
-              </NuxtLink>
-              <NuxtLink href="#" class="social-link"
-                ><Icon size="24" name="i-ic-baseline-facebook" />
+                ><i class="bi bi-tiktok"></i>
               </NuxtLink>
             </div>
           </div>

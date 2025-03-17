@@ -17,7 +17,7 @@
           <!-- Map Info -->
           <div class="contact-item d-flex align-items-start mb-4">
             <div class="icon-wrapper">
-              <Icon size="32" name="i-ic-baseline-location-on" />
+              <i style="font-size: 24px;" class="bi bi-geo-alt-fill"></i>
             </div>
             <div class="contact-content">
               <NuxtLink to="/" class="contact-title">Map</NuxtLink to="">
@@ -30,7 +30,7 @@
           <!-- Email Info -->
           <div class="contact-item d-flex align-items-start mb-4">
             <div class="icon-wrapper">
-              <Icon size="32" name="i-ic-baseline-mail" />
+              <i style="font-size: 24px;" class="bi bi-envelope-fill"></i>
             </div>
             <div class="contact-content">
               <NuxtLink to="/" class="contact-title">Email us</NuxtLink to="">
@@ -43,7 +43,7 @@
           <!-- Phone Info -->
           <div class="contact-item d-flex align-items-start">
             <div class="icon-wrapper">
-              <Icon size="32" name="i-ic-baseline-phone" />
+              <i style="font-size: 24px;" class="bi bi-telephone-fill"></i>
             </div>
             <div class="contact-content">
               <NuxtLink to="/" class="contact-title">Phone</NuxtLink to="">

@@ -20,7 +20,7 @@ defineProps({
       :to="link"
       class="text-white"
     >
-      <Icon v-if="icon" :name="icon" :color="color" :size="size" />
+      <slot></slot>
       {{ label }}</NuxtLink
     >
   </button>
