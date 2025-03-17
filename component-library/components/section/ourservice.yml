@@ -1,0 +1,62 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Service Section
+  description: Service Section
+  icon: 'cottage'
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  status: true
+  title: Our Services
+  name: NAIL LAB
+  button:
+    is_show: true
+    label: 'View All Services'
+    open_new_tab: true
+    link: '/services'
+  list_items:
+    - image: /images/mani.svg
+      title: Manicure
+      image_alt: Nail service 1
+      link: /services/#mani
+    - image: /images/Asset-1.png
+      title: Pedicure
+      image_alt: Nail service 2
+      link: /services/#pedicure
+    - image: /images/asset-2.svg
+      title: Dipping
+      image_alt: Nail service 3
+      link: /services/#dipping
+    - image: /images/asset-3.svg
+      title: Waxing
+      image_alt: Nail service 4
+      link: /services/#waxing
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  title:
+    type: text
+    label: Content
+  list_images[*].title:
+    type: text
+    label: Title 1
+  list_images[*].image:
+    type: image
+    label: Image 1
+  list_images[*].image_alt:
+    type: text
+    label: Image Alt
+  list_images[*].link:
+    type: text
+    label: Link
+  button.label:
+    type: text
+    label: Label
+  button.link:
+    type: text
+    label: Link

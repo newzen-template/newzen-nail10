@@ -1,0 +1,89 @@
+title: Website Demo
+seo:
+  page_description:
+  canonical_url:
+  featured_image:
+  featured_image_alt:
+  author_twitter_handle:
+  open_graph_type:
+  no_index: false
+content_blocks:
+  - _block_name: section/hero
+    status: true
+    description: 'Experience the Grace and Beauty at NAIL LAB​'
+    image_1: /images/model-abc.png
+    image_alt_1: 'Image Hero 1'
+    image_2: /images/mani.svg
+    image_alt_2: 'Image Hero 2'
+    image_3: /images/Asset-1.png
+    image_alt_3: 'Image Hero 3'
+    button:
+      is_show: true
+      label: 'Booking Now'
+      open_new_tab: true
+      link: '/#'
+
+  - _block_name: section/contact
+    status: true
+    logo: '/images/logo.png'
+    logo_alt: NAIL LAB
+    button:
+      is_show: true
+      label: 'Contact us'
+      open_new_tab: true
+      link: '/#'
+
+  - _block_name: section/about
+    status: true
+    title: About Us
+    description: <p><a href="https://naillabnc.com" target="_blank" rel="noopener"><strong>Nail Lab nail salon&nbsp;in&nbsp;Raleigh, NC 27615</strong></a>&nbsp;is a premier destination for those seeking top-quality&nbsp;<b>nail services</b>&nbsp;in a chic and relaxing environment.&nbsp;<b>Nail Lab</b>&nbsp;offers an extensive range of services including&nbsp;<b>manicures</b>,&nbsp;<b>pedicures</b>, gel nails, acrylic nails, and nail art. With a team of highly skilled technicians who stay up-to-date with the latest trends and techniques in the industry, clients can expect personalized and unmatched service that exceeds their expectations. In addition to our excellent service,&nbsp;<b>Nail Lab</b>&nbsp;prioritizes cleanliness and hygiene by using only high-quality products and following strict sanitization procedures. Our salon boasts modern interiors adorned with sleek furnishings that create a sophisticated ambiance for clients to unwind and enjoy their pampering session. Whether one desires a classic French manicure or wants to experiment with bold nail designs,&nbsp;<b>Nail Lab</b>&nbsp;in&nbsp;<b>Raleigh, NC 27615&nbsp;</b>ensures every individual leaves feeling rejuvenated with stunningly beautiful nails.&nbsp;</p>
+    list_images:
+      - image: /images/nail-lab-1-scaled.png
+        image_alt: Nail 1
+      - image: /images/nail-lab-2.png
+        image_alt: Nail 2
+      - image: /images/nail-lab-4.png
+        image_alt: Nail 3
+      - image: /images/how-to-soothe-irritation-after-waxing-Hero-sdc-101422.png
+        image_alt: Nail 4
+
+  - _block_name: section/ourservice
+    status: true
+    title: Our Services
+    background_color: '#94A3B8'
+    name_logo: NAIL LAB
+    button:
+      is_show: true
+      label: 'View All Services'
+      open_new_tab: true
+      link: '/services'
+    list_items:
+      - image: /images/mani.svg
+        title: Manicure
+        image_alt: Nail service 1
+        url: /services/#mani
+      - image: /images/Asset-1.png
+        title: Pedicure
+        image_alt: Nail service 2
+        url: /services/#pedicure
+      - image: /images/asset-2.svg
+        title: Dipping
+        image_alt: Nail service 3
+        url: /services/#dipping
+      - image: /images/asset-3.svg
+        title: Waxing
+        image_alt: Nail service 4
+        url: /services/#waxing
+
+  - _block_name: section/gallery
+    status: true
+    title: Our Work
+    button:
+      is_show: true
+      label: 'View Work'
+      open_new_tab: true
+      link: '/gallery'
+
+  - _block_name: section/comment
+    status: true
+    title: Comment

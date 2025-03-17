@@ -1,0 +1,63 @@
+title: Our Works
+
+seo:
+  page_description:
+  canonical_url:
+  featured_image:
+  featured_image_alt:
+  author_twitter_handle:
+  open_graph_type:
+  no_index: false
+
+content_blocks:
+  - _block_name: section/breadcrumb
+    status: true
+    background:
+    color: '#000000'
+    image: 'https://blancnailboutiquelbk.com/wp-content/uploads/2023/10/Red_nail_designs-Header.webp'
+    title: Our Works
+    style: false
+
+  - _block_name: gallery/hero
+    status: true
+    title: Images
+    sub_title: Image Gallery
+    background_color: '#11141d'
+    title_button: View More
+    gallery:
+      - label: Nails Design
+        item:
+          - image: /images/nail-lab-1-scaled.png
+            image_alt: Nails 1
+          - image: /images/nail-lab-2.png
+            image_alt: Nails 2
+          - image: /images/nail-lab-4.png
+            image_alt: Nails 3
+          - image: /images/ourwork1.png
+            image_alt: Nails 4
+          - image: /images/ourwork2.png
+            image_alt: Nails 5
+          - image: /images/ourwork3.png
+            image_alt: Nails 6
+          - image: /images/ourwork4.png
+            image_alt: Nails 7
+          - image: /images/ourwork5.png
+            image_alt: Nails 8
+          - image: /images/ourwork6.png
+            image_alt: Nails 9
+          - image: /images/ourwork7.png
+            image_alt: Nails 10
+      - label: Nails Design (other)
+        item:
+          - image: /images/nail-lab-1-scaled.png
+            image_alt: Nails 1
+          - image: /images/nail-lab-2.png
+            image_alt: Nails 2
+          - image: /images/nail-lab-4.png
+            image_alt: Nails 3
+          - image: /images/ourwork1.png
+            image_alt: Nails 4
+          - image: /images/ourwork2.png
+            image_alt: Nails 5
+          - image: /images/ourwork3.png
+            image_alt: Nails 6

@@ -1,0 +1,215 @@
+title: Menu Services
+
+seo:
+  page_description:
+  canonical_url:
+  featured_image:
+  featured_image_alt:
+  author_twitter_handle:
+  open_graph_type:
+  no_index: false
+
+content_blocks:
+  - _block_name: section/breadcrumb
+    status: true
+    background:
+      color: '#000000'
+      image: '/images/bg-nail-lab-5.png'
+    background_deco:
+      color: '#000000'
+      image: ''
+    title: Menu Services
+    style: true
+
+  - _block_name: services/menu
+    status: true
+    title: PEDICURE
+    background_color: '#11141d'
+    image: '/images/menu1.png'
+    image_alt: menu 1
+    is_show_image: true
+    description: '<div class="elementor-widget-container"><p><i><span style="font-weight: 400;">Pink Himalayan Salt, rich in nutrients and minerals, aids in various skin conditions such as acne treatment, psoriasis, and eczema. It also provides pain relief, decreases stress, enhances blood circulation, promotes detoxification, aids in sleep, exfoliates the skin, removes splinters, relaxes tired muscles, softens skin, assists in weight loss by expelling excess water from cells, detoxifies the skin, and promotes skin brightening.</span></i></p><p><i><span style="font-weight: 400;">The detox scrub helps diminish swelling, soothe the body, and harmonize your energy.</span></i></p>								</div>'
+    menu:
+      - name: Classic Pedicure
+        price: 38
+        description: <p class="elementor-price-list-description">Swift, essential foot care. Includes basic cleanup and gentle massage with a warm towel.</p>
+      - name: Lavish Pedicure
+        price: 45
+        description:
+          A contemporary take on the classic pedicure. Immerse your feet in a relaxing soak,
+          followed by a sugar scrub to enhance blood circulation,
+          and a warm towel treatment along with callus treatment.,
+
+      - name: Detoxifying Pedicure
+        price: 58
+        description: <p class="elementor-price-list-description">- Begin with a fresh fruit &amp; sea salt soak to draw out toxins from your body.<br>- Deep cleanse with a detox scrub.<br>- Enjoy a fruit-infused mask to reduce swelling and promote relaxation.<br>- Complete your experience with a lavender paraffin wax treatment and warm towels.<br>- Choose from cucumber, eucalyptus, tangerine, or green tea for a personalized touch.<br>- Detox scrub helps diminish swelling, soothe the body, and harmonize your energy.</p>
+      - name: Champagne & Rosé Pedicure
+        price: 75
+        description: <p class="elementor-price-list-description">- Indulge in the luxury of our Champagne &amp; Rose pedicure, a celebration of skin indulgence.<br>- Start with a Champagne &amp; Rose infused bath and Pink Himalayan Salt.<br>- Enjoy a rejuvenating Champagne &amp; Rose sugar scrub, followed by a champagne foot rinse and a hydrating mask.<br>- Experience rose petal collagen foot socks for ultra-deep moisture.<br>- Complete your luxurious experience with Champagne &amp; Rose lotion, warm towels, and a soothing deep tissue hot stone massage, leaving your skin tender and fragrant.</p>
+      - name: Coco Milk Pedicure
+        price: 75
+        description: <p class="elementor-price-list-description">- Delight in the opulence of our coco-milk pedicure, a true indulgence in the nourishing properties of this wonder serum.<br>- Begin with a skin-reviving coconut milk-infused bath &amp; Pink Himalayan Salt.<br>- Experience the revitalizing effects of a coco milk sugar scrub, followed by a refreshing fresh coconut milk foot rinse and hydrating coconut mud masque.<br>- Immerse your feet in collagen foot socks for a deeply moisturized finish.<br>- Bring your pampering to an end with organic coconut milk lotion and a soothing deep tissue hot stone massage with warm towels, leaving your skin feeling as soft as a baby's sole.</p>
+      - name: Milk & Honey Pedicure
+        price: 75
+        description: <p class="elementor-price-list-description">- Begin your journey with an Organic Milk Bath infused with the wholesome essence of organic milk &amp; Pink Himalayan Salt, reviving your skin.<br>- Experience revitalization as the honey and milk sugar scrub imparts refreshing effects to your experience.<br>- Indulge your feet in pure bliss with a honey foot rinse and a hydrating mud masque, providing an oasis for your senses.<br>- Luxuriate in the peak of indulgence with collagen foot socks, deeply moisturizing and nourishing.<br>- Conclude your pampering session with the tender application of organic milk lotion and the soothing embrace of a hot towel &amp; deep tissue hot stone massage, leaving your skin as soft as a baby's touch.</p>
+      - name: CBD Cannabis Pedicure
+        price: 85
+        description: <p class="elementor-price-list-description">- Indulge in our Premium CBD Cannabis Pedicure, an ultimate treat for your skin &amp; health:<br>- Begin your pedicure experience with a CBD-infused bath &amp; bath bomb, paired with Pink Himalayan Salt.<br>- Delight in a rejuvenating CBD sugar scrub, followed by a hemp-infused foot rinse and a CBD hydrating mud masque.<br>- Revel in revitalizing unique cannabis collagen foot socks for deep moisture.<br>- Seal off your amazing experience with our organic cannabis lotion and a soothing deep tissue hot stone massage with warm towels, leaving your skin tender and relaxed like walking on clouds.</p>
+      - name: 24k Golden Pedicure
+        price: 58
+        description: <p class="elementor-price-list-description">- Luxuriate in regal style with our royalty pedicure, enhanced by the splendor of 24k Gold.<br>- A transcendent journey into the world of decadence and indulgence.<br>- Initiate your unique experience with an extravagant foot soak infused with the essence of pure 24k gold powder &amp; Pink Himalayan Salt, enveloping your feet in a shimmering embrace.<br>- Submerge in the refinement of a meticulously crafted sugar scrub infused with 24k gold powder, followed by a golden foot rinse and a golden mystique mud masque to unveil the true splendor of your skin.<br>- Dive into the pure luxury of a custom-made foot mask enriched with gold and collagen, ensuring an impeccably moisturized and luminous finish.<br>- Finish your majestic experience with the application of an exclusive 24k gold massage cream and an indulgent deep tissue hot stone massage, with warm towels, leaving your skin adorned with the resplendence befitting royalty.</p>
+
+  - _block_name: services/pack
+    status: true
+    menu:
+      - name: MANICURE
+        image: '/images/background_section_comment.png'
+        list_items:
+          - name: Classic Manicure
+            price: 28
+            description: Meticulous nail trimming and shaping, cuticle care, soothing massage with lotion.
+          - name: Nail Lab Signature Manicure
+            price: 48
+            description: Indulge in our Signature Manicure, a meticulous treatment encompassing nail trimming, reshaping, and cuticle care. Immerse your weary hands in our sea salt soak, revitalize with organic sugar scrub, enjoy a soothing massage with warm lotion, and luxuriate in warm towels. Complete the look with our high-quality flawless nail polish and choose between a paraffin treatment or collagen gloves. Personalize your experience with a choice of organic citrus or cucumber.
+      - name: KID SERVICES
+        image: '/images/menu1.png'
+        list_items:
+          - name: Kid Pedicure
+            price: 25
+          - name: Kid Manicure
+            price: 25
+          - name: Regular Polish
+            price: 12
+          - name: Gel Polish
+            price: 20
+
+  - _block_name: services/options
+    status: true
+    description: For pricing, if you have an inspiration picture, please show us and we’ll tell you the exact price
+    image: '/images/menu2.png'
+    image_alt: menu 2
+    note: Price is based upon the time consumption and details. We’ll let you know the exact price before proceeding
+    list_items:
+      - name: ACRYLIC
+        menu:
+          - title: Full Set
+            price: $70+
+          - title: Refill
+            price: $65+
+          - title: Ombré
+            price: $80+
+          - title: Freestyle
+            price: $130 - $300+
+      - name: Add-on
+        menu:
+          - title: Special Shape
+            price: $5
+          - title: Extra Length
+            price: $5+
+          - title: Cut Down/Reshape
+            price: $10
+          - title: Nail Repair
+            price: $5+
+          - title: Nail Removal
+            price: $20+
+          - title: Without-Service French
+            price: $10
+          - title: Deep French/V French
+            price: $20
+          - title: Chrome
+            price: $15+
+          - title: Nail Art & Swarovski Crystal
+            price: Ask for price
+
+  - _block_name: services/pack
+    status: true
+    menu:
+      - name: DIPPING POWDER
+        image: '/images/menu3.png'
+        image_alt: 'DIPPING POWDER'
+        list_items:
+          - name: Dipping With Natural Nails
+            price: 55
+          - name: Dipping With Tip On
+            price: 65
+          - name: French Dipping
+            price: 70
+          - name: Ombre Dipping
+            price: 75
+          - name: Dipping Take-Off Only
+            price: 20
+      - name: GEL X
+        image: '/images/menu4.png'
+        image_alt: 'GEL X'
+        list_items:
+          - name: Gel X Extension
+            price: 70
+          - name: Hard Gel/Builder Gel Full Set
+            price: 65
+          - name: Hard Gel/Builder Gel Fill
+            price: 60
+
+  - _block_name: services/menu
+    status: true
+    title: WAXING
+    is_show_image: false
+    menu:
+      - name: Eyebrows
+        price: 15
+      - name: Lip
+        price: 10
+      - name: Chin
+        price: 15
+      - name: Face
+        price: 45
+      - name: Full Arms
+        price: 50
+      - name: Half Arms
+        price: 35
+      - name: Neck
+        price: 25
+      - name: Under Arms
+        price: 30
+      - name: Full Legs
+        price: 65
+      - name: Half Legs
+        price: 45
+      - name: Toes
+        price: 10
+      - name: Fingers
+        price: 10
+
+  - _block_name: services/food
+    status: true
+    title: DRINKS
+    is_two_column: true
+    menu:
+      - name: CARBONATED SOFT DRINK
+        description: '<div class="elementor-widget-container"><p><span style="font-weight: 400;">Experience a refreshing symphony of bubbles and flavor that adds a spark to every sip.</span></p><p><span style="font-weight: 400;">– Coke</span></p><p><span style="font-weight: 400;">– Fanta&nbsp;</span></p><p><span style="font-weight: 400;">– Diet Coke&nbsp;</span></p><p><span style="font-weight: 400;">– Ginger Ale&nbsp;</span></p><p><span style="font-weight: 400;">– Sprite</span></p></div>'
+      - name: RED WINE
+        description: '<div class="elementor-widget-container"><p><span style="font-weight: 400;">Indulge in a symphony of rich, velvety notes that captivate the senses and elevate every moment.</span></p><p><span style="font-weight: 400;">– Cabernet Sauvignon&nbsp;</span></p><p><span style="font-weight: 400;">– Merlot&nbsp;</span></p><p><span style="font-weight: 400;">– Malbec&nbsp;</span></p><p><span style="font-weight: 400;">– Pinot Noir&nbsp;</span></p><p><span style="font-weight: 400;">– Syrah</span></p>								</div>'
+      - name: ICED TEA
+        description: '<div class="elementor-widget-container"><p><span style="font-weight: 400;">Stay cool with our refreshing iced tea, capturing the essence of pure relaxation in every frosty glass.</span></p><p><span style="font-weight: 400;">– Lipton Peach Iced Tea</span></p><p><span style="font-weight: 400;">– Sweet Tea</span></p><p><span style="font-weight: 400;">– Unsweetened Tea</span></p>'
+      - name: WHITE WINE
+        description: '<div class="elementor-widget-container"><p><span style="font-weight: 400;">Experience an exquisite harmony of bright, refreshing notes that dance on the palate, embodying the essence of pure sophistication.</span></p><p><span style="font-weight: 400;">– Sauvignon Blanc</span></p><p><span style="font-weight: 400;">– Chardonnay</span></p><p><span style="font-weight: 400;">– Riesling&nbsp;</span></p><p><span style="font-weight: 400;">– Pinot Grigio&nbsp;</span></p><p><span style="font-weight: 400;">– Moscato</span></p>								</div>'
+      - name: ROSE WINES
+        description: '<div class="elementor-widget-container"><p><span style="font-weight: 400;">Discover a perfect balance of delicate hues and vibrant flavors that evoke the spirit of a sun-soaked celebration.</span></p><p><span style="font-weight: 400;">– Dry Rosé</span></p><p><span style="font-weight: 400;">– White Zinfandel</span></p></div>'
+      - name: SPARKLING WINES
+        description: '<div class="elementor-widget-container"><p><span style="font-weight: 400;">Savor the effervescence of celebration with our sparkling wines. An effervescent symphony of joy, crafted to sparkle in every glass, creating moments of pure delight and festive allure.</span></p><p><span style="font-weight: 400;">– Prosecco</span></p><p><span style="font-weight: 400;">– Cava</span></p><p><span style="font-weight: 400;">– Sparkling Rosé</span></p><p><span style="font-weight: 400;">– Cristalino Cava Brut</span></p> </div>'
+      - name: CHAMPAGNES
+        description: '<div class="elementor-widget-container"><p><span style="font-weight: 400;">Cherish the moment with our selection of Champagnes – an embodiment of luxury. Each bottle is a celebration waiting to be uncorked, offering a taste of opulence and timeless sophistication.</span></p><p><span style="font-weight: 400;">– Moët &amp; Chandon Impérial</span></p><p><span style="font-weight: 400;">– Anna de Codorniu Brut (Spain)</span></p><p><span style="font-weight: 400;">– Louis Perdrier Brut Excellence</span></p><p><span style="font-weight: 400;">– Domaine de Paris Rose</span></p><p><span style="font-weight: 400;">– Light Rosé</span></p><p><span style="font-weight: 400;">– Jacqueline Brut Blanc de Blancs</span></p><p><span style="font-weight: 400;">– Veuve Ambal Brummell Methode</span></p><p><span style="font-weight: 400;">– Traditionnelle Brut Cuvee Rose</span></p></div>'
+      - name: HOT TEA
+        description: '<div class="elementor-widget-container"><p><span style="font-weight: 400;">Wrap your senses in comfort with our hot tea selection: a soothing infusion of warmth and aroma, inviting you to unwind and savor the serene moments in every steaming cup.</span></p><p><span style="font-weight: 400;">– Lemon, Ginger &amp; Manuka Honey</span></p><p><span style="font-weight: 400;">– Korean Honey Pear</span></p><p><span style="font-weight: 400;">– Lipton Black Tea</span></p><p><span style="font-weight: 400;">– Lemon &amp; Orange</span></p><p><span style="font-weight: 400;">– Organic Peppermint</span></p><p><span style="font-weight: 400;">– Earl Grey</span></p><p><span style="font-weight: 400;">– Green Tea with Jasmine</span></p><p><span style="font-weight: 400;">– Organic Chamomile</span></p><p><span style="font-weight: 400;">– Decaffeinated</span></p><p><span style="font-weight: 400;">– English Breakfast</span></p><p><span style="font-weight: 400;">– Assam Black</span></p></div>'
+
+  - _block_name: services/food
+    status: true
+    title: NAIL LAB SIGNATURE COCKTAILS
+    is_two_column: false
+    menu:
+      - name: Mimosa Fizz Delight
+        description: '<span style="font-weight: 400;">Experience a delightful fusion of crisp, chilled champagne and freshly squeezed orange juice. This classic concoction is the epitome of brunch elegance, boasting a perfect balance of bubbly sophistication and vibrant citrus notes.</span>'
+      - name: Sunset Margarita
+        description: '<span style="font-weight: 400;">Indulge in our Margarita masterpiece and transport your senses to the sun-soaked shores of relaxation. Immerse yourself in the tangy embrace of premium tequila, perfectly complemented by the zing of fresh lime juice and the subtle sweetness of orange liqueur. Served over ice and rimmed with salt, every sip is a journey to a beachside paradise.</span>'
+
+      - name: Minted Breeze Mojito
+        description: '<span style="font-weight: 400;">Elevate your spirits with the refreshing allure of our Mojito marvel. Muddled mint leaves, zesty lime, and a touch of simple syrup dance together in a symphony of flavors, creating a perfectly balanced libation. Crowned with the effervescence of soda water and served over ice, each sip of our Mojito is a rejuvenating escape.</span>'

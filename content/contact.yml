@@ -1,0 +1,29 @@
+title: Social Media
+
+seo:
+  page_description:
+  canonical_url:
+  featured_image:
+  featured_image_alt:
+  author_twitter_handle:
+  open_graph_type:
+  no_index: false
+
+content_blocks:
+  - _block_name: section/breadcrumb
+    status: true
+    background:
+    color: '#000000'
+    image: 'https://blancnailboutiquelbk.com/wp-content/uploads/2023/10/Red_nail_designs-Header.webp'
+    title: Social Media
+    style: false
+
+  - _block_name: contact/hero
+    status: true
+    title: Get in touch and let us know how we can help.
+    sub_title: Image Gallery
+    background_color: '#11141d'
+    title_button: View More
+    address: 9414 Falls of Neuse Rd Ste 100, Raleigh, NC 27615, United States
+    mail: naillabraleigh@icloud.com
+    phone: (919) 336-9999

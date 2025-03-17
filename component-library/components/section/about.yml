@@ -1,0 +1,40 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: About Section
+  description: About Section
+  icon: 'cottage'
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  status: true
+  title: About Us
+  description: Nail Lab nail salon in Raleigh, NC 27615 is a premier destination for those seeking top-quality nail services in a chic and relaxing environment. Nail Lab offers an extensive range of services including manicures, pedicures, gel nails, acrylic nails, and nail art. With a team of highly skilled technicians who stay up-to-date with the latest trends and techniques in the industry, clients can expect personalized and unmatched service that exceeds their expectations. In addition to our excellent service, Nail Lab prioritizes cleanliness and hygiene by using only high-quality products and following strict sanitization procedures. Our salon boasts modern interiors adorned with sleek furnishings that create a sophisticated ambiance for clients to unwind and enjoy their pampering session. Whether one desires a classic French manicure or wants to experiment with bold nail designs, Nail Lab in Raleigh, NC 27615 ensures every individual leaves feeling rejuvenated with stunningly beautiful nails.
+  list_images:
+    - image: /images/nail-lab-1-scaled.png
+      image_alt: Nail 1
+    - image: /images/nail-lab-2.png
+      image_alt: Nail 2
+    - image: /images/nail-lab-4.png
+      image_alt: Nail 3
+    - image: /images/how-to-soothe-irritation-after-waxing-Hero-sdc-101422.png
+      image_alt: Nail 4
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  title:
+    type: text
+    label: Content
+  description:
+    type: markdown
+    label: Content
+  list_images[*].image:
+    type: image
+    label: Image 1
+  list_images[*].image_alt:
+    type: text
+    label: Image Alt

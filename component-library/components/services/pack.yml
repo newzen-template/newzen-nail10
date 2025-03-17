@@ -1,0 +1,41 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Menu Services
+  description: Menu Services
+  icon: 'cottage'
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  status: true
+  menu:
+    - name: DIPPING POWDER
+      image: '/images/menu3.png'
+      list_items:
+        - name: Dipping With Natural Nails
+          price: 55
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  menu[*].name:
+    type: text
+    label: Content
+  menu[*].image:
+    type: image
+    label: Image 1
+  menu[*].image_alt:
+    type: text
+    label: Image 1 Alt Text
+  menu[*].list_items[*].name:
+    type: text
+    label: Content
+  menu[*].list_items[*].price:
+    type: number
+    label: Price
+  menu[*].list_items[*].description:
+    type: textarea
+    label: Description

@@ -1,0 +1,53 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Menu Services
+  description: Menu Services
+  icon: 'cottage'
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  status: true
+  description: For pricing, if you have an inspiration picture, please show us and we’ll tell you the exact price
+  image: '/images/menu2.png'
+  image_alt: menu 2
+  note: Price is based upon the time consumption and details. We’ll let you know the exact price before proceeding
+  list_items:
+    - name: ACRYLIC
+      menu:
+        - title: Full Set
+          price: $70+
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  description:
+    type: textarea
+    label: Description
+  image:
+    type: image
+    label: Image
+  image_alt:
+    type: text
+    label: Image Alt
+  note:
+    type: textarea
+    label: Note
+  list_items[*].name:
+    type: text
+    label: Name
+  list_items[*].menu[*].title:
+    type: text
+    label: Title
+  list_items[*].menu[*].price:
+    type: number
+    label: Price
+  # list_items[*].menu[*].price_currency:
+  #   type: select
+  #   label: Price Currency
+  #   options:
+  #     - USD
+  #     - EUR

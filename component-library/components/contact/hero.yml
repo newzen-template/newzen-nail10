@@ -1,0 +1,45 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Menu Services
+  description: Menu Services
+  icon: 'cottage'
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  status: true
+  title: Get in touch and let us know how we can help.
+  sub_title: Image Gallery
+  background_color: '#11141d'
+  title_button: View More
+  address: 9414 Falls of Neuse Rd Ste 100, Raleigh, NC 27615, United States
+  mail: naillabraleigh@icloud.com
+  phone: (919) 336-9999
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  title:
+    type: text
+    label: Title
+  sub_title:
+    type: text
+    label: Sub Title
+  background_color:
+    type: color
+    label: Background Color
+  title_button:
+    type: text
+    label: Title Button Text
+  address:
+    type: text
+    label: Address
+  mail:
+    type: text
+    label: Email
+  phone:
+    type: text
+    label: Phone Number

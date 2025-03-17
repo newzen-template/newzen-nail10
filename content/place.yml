@@ -1,0 +1,51 @@
+title: Our Place
+
+seo:
+  page_description:
+  canonical_url:
+  featured_image:
+  featured_image_alt:
+  author_twitter_handle:
+  open_graph_type:
+  no_index: false
+
+content_blocks:
+  - _block_name: section/breadcrumb
+    status: true
+    background:
+    color: '#000000'
+    image: 'https://blancnailboutiquelbk.com/wp-content/uploads/2023/10/Red_nail_designs-Header.webp'
+    title: Our Place
+    style: false
+
+  - _block_name: place/hero
+    status: true
+    title: Images
+    sub_title: Image Gallery
+    background_color: '#11141d'
+    title_button: View More
+    gallery:
+      - label: Nails Design
+        item:
+          - image: /images/place-1.png
+            image_alt: Place 1
+          - image: /images/place-2.png
+            image_alt: Place 2
+          - image: /images/place-3.png
+            image_alt: Place 3
+          - image: /images/place-4.png
+            image_alt: Place 4
+          - image: /images/place-5.png
+            image_alt: Place 5
+          - image: /images/place-6.png
+            image_alt: Place 6
+      - label: HAHAHA
+        item:
+          - image: /images/place-1.png
+            image_alt: Place 1
+          - image: /images/place-2.png
+            image_alt: Place 2
+          - image: /images/place-3.png
+            image_alt: Place 3
+          - image: /images/place-4.png
+            image_alt: Place 4
