@@ -53,7 +53,7 @@
           class="load-more-btn"
           @click="handleLoadMore()"
         >
-          {{ block.title_button }}
+          View More
         </button>
       </div>
     </div>

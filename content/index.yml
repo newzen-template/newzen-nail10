@@ -40,15 +40,14 @@ content_blocks:
     background_color: '#11141d'
     title: About Us
     description: <p><a href="https://naillabnc.com" target="_blank" rel="noopener"><strong>Nail Lab nail salon&nbsp;in&nbsp;Raleigh, NC 27615</strong></a>&nbsp;is a premier destination for those seeking top-quality&nbsp;<b>nail services</b>&nbsp;in a chic and relaxing environment.&nbsp;<b>Nail Lab</b>&nbsp;offers an extensive range of services including&nbsp;<b>manicures</b>,&nbsp;<b>pedicures</b>, gel nails, acrylic nails, and nail art. With a team of highly skilled technicians who stay up-to-date with the latest trends and techniques in the industry, clients can expect personalized and unmatched service that exceeds their expectations. In addition to our excellent service,&nbsp;<b>Nail Lab</b>&nbsp;prioritizes cleanliness and hygiene by using only high-quality products and following strict sanitization procedures. Our salon boasts modern interiors adorned with sleek furnishings that create a sophisticated ambiance for clients to unwind and enjoy their pampering session. Whether one desires a classic French manicure or wants to experiment with bold nail designs,&nbsp;<b>Nail Lab</b>&nbsp;in&nbsp;<b>Raleigh, NC 27615&nbsp;</b>ensures every individual leaves feeling rejuvenated with stunningly beautiful nails.&nbsp;</p>
-    list_images:
-      - image: /images/nail-lab-1-scaled.png
-        image_alt: Nail 1
-      - image: /images/nail-lab-2.png
-        image_alt: Nail 2
-      - image: /images/nail-lab-4.png
-        image_alt: Nail 3
-      - image: /images/how-to-soothe-irritation-after-waxing-Hero-sdc-101422.png
-        image_alt: Nail 4
+    image_1: /images/nail-lab-1-scaled.png
+    image_alt_1: Nail 1
+    image_2: /images/nail-lab-2.png
+    image_alt_2: Nail 2
+    image_3: /images/nail-lab-4.png
+    image_alt_3: Nail 3
+    image_4: /images/how-to-soothe-irritation-after-waxing-Hero-sdc-101422.png
+    image_alt_4: Nail 4
 
   - _block_name: section/ourservice
     status: true

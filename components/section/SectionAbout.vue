@@ -18,19 +18,31 @@
         </div>
         <div class="col-lg-6">
           <div class="image-grid">
-            <div
-              v-for="(item, index) in block.list_images"
-              :key="index"
-              :class="[
-                'image-item',
-                index === 0 || index === block.list_images.length - 1
-                  ? 'image-large'
-                  : 'image-small',
-              ]"
-            >
+            <div>
               <NuxtImg
-                :src="item.image"
-                :alt="item.image_alt"
+                :src="block.image_1"
+                :alt="block.image_alt"
+                class="img-fluid rounded shadow-lg"
+              />
+            </div>
+            <div>
+              <NuxtImg
+                :src="block.image_2"
+                :alt="block.image_alt_2"
+                class="img-fluid rounded shadow-lg"
+              />
+            </div>
+            <div>
+              <NuxtImg
+                :src="block.image_3"
+                :alt="block.image_alt_3"
+                class="img-fluid rounded shadow-lg"
+              />
+            </div>
+            <div>
+              <NuxtImg
+                :src="block.image_4"
+                :alt="block.image_alt_4"
                 class="img-fluid rounded shadow-lg"
               />
             </div>
@@ -84,12 +96,10 @@ defineProps<Props>();
 .about-section {
   position: relative;
   overflow: hidden;
-  min-height: 780px;
-  width: 100%;
+  padding: 4rem 0;
 
   @include breakpoints.tablet-down {
-    min-height: auto;
-    padding: 40px 0;
+    padding: 3rem 0;
   }
 }
 
@@ -114,117 +124,72 @@ defineProps<Props>();
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
-  padding: 1rem;
   max-width: 800px;
   margin: 0 auto;
-  position: relative;
-
-  @include breakpoints.tablet-down {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 1rem;
-    width: 100%;
-    max-width: 600px;
-    aspect-ratio: 1;
-  }
-
-  @include breakpoints.mobile-down {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-    padding: 0.75rem;
-    max-width: 100%;
-  }
-}
-
-.image-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease;
+  padding: 1rem;
   aspect-ratio: 1;
 
-  &.image-small {
-    width: 280px;
-    height: 280px;
-  }
-
-  &.image-large {
-    width: 320px;
-    height: 320px;
-  }
-
   @include breakpoints.tablet-down {
-    border-radius: 12px;
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 1;
-    transform: none;
-
-    &.image-small,
-    &.image-large {
-      width: 280px;
-      height: 280px;
-    }
+    max-width: 600px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   @include breakpoints.mobile-down {
-    border-radius: 8px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 0.75rem;
   }
 
-  &:nth-child(1) {
-    transform: translateX(-20px) translateY(20px);
-    @include breakpoints.tablet-down {
-      transform: none !important;
-    }
-  }
-
-  &:nth-child(2) {
-    transform: translateX(0) translateY(40px) !important;
-    @include breakpoints.tablet-down {
-      transform: none !important;
-    }
-  }
-
-  &:nth-child(3) {
-    transform: translateX(40px) translateY(0) !important;
-    @include breakpoints.tablet-down {
-      transform: none !important;
-    }
-  }
-
-  &:nth-child(4) {
-    transform: translateX(20px) translateY(-20px);
-    @include breakpoints.tablet-down {
-      transform: none !important;
-    }
-  }
-
-  &.visible {
-    opacity: 1;
-    transform: translateX(0) translateY(0);
-  }
-
-  &:hover {
-    transform: scale(1.05);
-    @include breakpoints.tablet-down {
-      transform: scale(1.03);
-    }
-    @include breakpoints.mobile-down {
-      transform: scale(1.02);
-    }
-  }
-
-  img {
+  div {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 
-    @include breakpoints.tablet-down {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    &:nth-child(1) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    &:nth-child(2) {
+      grid-column: 2;
+      grid-row: 1;
+      @include breakpoints.desktop-up {
+        height: 90%;
+        width: 90%;
+        margin-top: 10%;
+      }
+    }
+
+    &:nth-child(3) {
+      grid-column: 1;
+      grid-row: 2;
+      @include breakpoints.desktop-up {
+        height: 90%;
+        width: 90%;
+        margin-left: 10%;
+      }
+    }
+
+    &:nth-child(4) {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 }
