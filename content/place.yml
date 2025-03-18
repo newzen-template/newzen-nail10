@@ -18,10 +18,7 @@ content_blocks:
 
   - _block_name: place/hero
     status: true
-    title: Images
-    sub_title: Image Gallery
     background_color: '#11141d'
-    title_button: View More
     gallery:
       - label: Nails Design
         item:

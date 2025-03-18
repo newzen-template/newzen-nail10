@@ -35,7 +35,7 @@
               "
               class="section-title text-white fw-semibold pb-2"
             >
-              {{ block.title }}
+              <div v-html="block.title"></div>
             </h2>
             <swiper
               :modules="[SwiperAutoplay, SwiperPagination]"

@@ -10,8 +10,6 @@ spec:
 blueprint:
   status: true
   background_color: '#11141d'
-  image: '/images/background_section_comment.png'
-  image_alt: Image
   gallery:
     - label: Nails Design
       item:

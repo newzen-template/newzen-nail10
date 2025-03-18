@@ -258,6 +258,8 @@ const toggleMobileMenu = () => {
 </script>
 
 <style lang="scss" scoped>
+@use '@/assets/style/_breakpoints.scss' as breakpoints;
+
 .logo {
   height: 40px;
 }
@@ -299,7 +301,7 @@ const toggleMobileMenu = () => {
 }
 
 .phone-button {
-  @media (max-width: 991.98px) {
+  @include breakpoints.tablet-down {
     width: 40px !important;
     height: 40px !important;
     padding: 0 !important;
@@ -332,7 +334,7 @@ const toggleMobileMenu = () => {
   visibility: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media (max-width: 991.98px) {
+  @include breakpoints.tablet-down {
     opacity: 1;
     visibility: visible;
   }
@@ -435,7 +437,7 @@ const toggleMobileMenu = () => {
 }
 
 .menu-desktop {
-  @media (min-width: 992px) {
+  @include breakpoints.desktop-up {
     flex: 1;
     margin-left: auto;
 
@@ -447,14 +449,14 @@ const toggleMobileMenu = () => {
 }
 
 .navbar {
-  @media (min-width: 992px) {
+  @include breakpoints.desktop-up {
     padding: 1rem 0;
     gap: 2rem;
   }
 }
 
 .navbar-brand {
-  @media (min-width: 992px) {
+  @include breakpoints.desktop-up {
     flex: 0 0 auto;
   }
 }
