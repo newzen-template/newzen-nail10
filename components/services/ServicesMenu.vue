@@ -1,11 +1,11 @@
 <template>
   <section
     v-if="block.status"
-    :style="{ background: block?.background_color || 'transparent' }"
+    :style="{ background: block?.background_color }"
     :data-cms-bind="dataBinding"
   >
     <div class="container">
-      <div v-if="block.is_show_image" style="margin: 2rem 0">
+      <div v-if="block.is_show_image">
         <NuxtImg
           class="image-menu"
           :src="block?.image || ' '"
@@ -92,6 +92,7 @@ onMounted(() => {
 @use '@/assets/style/_breakpoints.scss' as breakpoints;
 
 .title-menu {
+  padding: 1rem;
   font-size: 37px;
   font-weight: 700;
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);

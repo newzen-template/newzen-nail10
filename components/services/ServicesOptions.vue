@@ -67,8 +67,6 @@ defineProps<Props>();
 @use '@/assets/style/_breakpoints.scss' as breakpoints;
 
 .menu-section {
-  margin-bottom: 2rem;
-
   &:last-child {
     margin-bottom: 0;
   }

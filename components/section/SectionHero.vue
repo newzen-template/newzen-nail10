@@ -1,10 +1,11 @@
 <template>
-  <div class="px-3 section-hero">
-    <section
-      v-if="block.status"
-      :data-cms-bind="dataBinding"
-      class="rounded-bottom-5 position-relative hero-section"
-    >
+  <section
+    v-if="block.status"
+    :data-cms-bind="dataBinding"
+    :style="{ backgroundColor: block.background_color }"
+    class="px-3 section-hero"
+  >
+    <div class="rounded-bottom-5 position-relative hero-section">
       <div class="container">
         <div class="row">
           <div
@@ -44,8 +45,8 @@
         </div>
       </div>
       <div class="position-absolute hero-bg"></div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script lang="ts" setup>
@@ -125,12 +126,22 @@ function getCurrentPageText(): string {
 }
 
 .hero-section {
-  margin-top: 84.5px;
+  margin-top: 82px;
+  padding-top: 20px;
   height: 528px;
   background-image: url('/images/bg-nail-lab.1.png');
   background-position: bottom center;
   background-repeat: no-repeat;
   overflow: hidden;
+
+  @include breakpoints.mobile-down {
+    padding-top: 20px;
+    margin-top: 84.5px;
+  }
+
+  @include breakpoints.tablet-down {
+    margin-top: 50px;
+  }
 }
 
 .row {
@@ -195,6 +206,10 @@ function getCurrentPageText(): string {
     width: 36% !important;
     margin: 0 auto;
     font-size: 12px !important;
+  }
+
+  @include breakpoints.tablet-down {
+    width: 32% !important;
   }
 }
 

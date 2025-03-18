@@ -3,7 +3,6 @@
     v-if="block.status"
     :style="{ background: block.background_color }"
     :data-cms-bind="dataBinding"
-    class="py-3"
   >
     <div class="container-md">
       <div class="row g-4">

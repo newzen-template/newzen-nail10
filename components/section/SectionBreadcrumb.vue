@@ -1,6 +1,13 @@
 <template>
-  <div class="px-3">
-    <section
+  <section
+    :style="{
+      backgroundColor: block.background_color,
+    }"
+    v-if="block.status"
+    :data-cms-bind="dataBinding"
+    class="px-3"
+  >
+    <div
       :style="{
         backgroundImage: !block.style
           ? 'url(/images/bg-nail-lab.1.png)'
@@ -12,8 +19,6 @@
         paddingTop: '160px',
         paddingBottom: '120px',
       }"
-      v-if="block.status"
-      :data-cms-bind="dataBinding"
       class="breadcrumb-section rounded-bottom-5 position-relative d-flex align-items-center justify-content-center flex-column"
     >
       <h6
@@ -27,8 +32,8 @@
       </h1>
       <div v-if="block.style" class="bg-overlay bg-overlay-style"></div>
       <div v-if="!block.style" class="bg-overlay bg-overlay-no-style"></div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script lang="ts" setup>

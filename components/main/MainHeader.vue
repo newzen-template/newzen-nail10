@@ -1,6 +1,9 @@
 <!-- eslint-disable vue/html-self-closing -->
 <template>
-  <header class="main-header w-100 d-flex align-items-center">
+  <header
+    class="main-header w-100 d-flex align-items-center"
+    :style="{ backgroundColor: headerData.background_color }"
+  >
     <div class="container">
       <nav class="navbar d-flex justify-content-between align-items-center">
         <NuxtLink to="https://naillabnc.com" class="navbar-brand">
@@ -140,6 +143,7 @@ const langCurrent = ref(langDefault.value);
 
 const homeUrl = ref('/');
 const headerData: any = ref(header.en);
+console.log(headerData.value);
 
 function renderHeader() {
   for (const key of Object.keys(header)) {

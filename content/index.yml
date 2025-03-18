@@ -10,6 +10,7 @@ seo:
 content_blocks:
   - _block_name: section/hero
     status: true
+    background_color: '#11141d'
     description: 'Experience the Grace and Beauty at NAIL LAB​'
     image_1: /images/model-abc.png
     image_alt_1: 'Image Hero 1'
@@ -25,6 +26,7 @@ content_blocks:
 
   - _block_name: section/contact
     status: true
+    background_color: '#11141d'
     logo: '/images/logo.png'
     logo_alt: NAIL LAB
     button:
@@ -35,6 +37,7 @@ content_blocks:
 
   - _block_name: section/about
     status: true
+    background_color: '#11141d'
     title: About Us
     description: <p><a href="https://naillabnc.com" target="_blank" rel="noopener"><strong>Nail Lab nail salon&nbsp;in&nbsp;Raleigh, NC 27615</strong></a>&nbsp;is a premier destination for those seeking top-quality&nbsp;<b>nail services</b>&nbsp;in a chic and relaxing environment.&nbsp;<b>Nail Lab</b>&nbsp;offers an extensive range of services including&nbsp;<b>manicures</b>,&nbsp;<b>pedicures</b>, gel nails, acrylic nails, and nail art. With a team of highly skilled technicians who stay up-to-date with the latest trends and techniques in the industry, clients can expect personalized and unmatched service that exceeds their expectations. In addition to our excellent service,&nbsp;<b>Nail Lab</b>&nbsp;prioritizes cleanliness and hygiene by using only high-quality products and following strict sanitization procedures. Our salon boasts modern interiors adorned with sleek furnishings that create a sophisticated ambiance for clients to unwind and enjoy their pampering session. Whether one desires a classic French manicure or wants to experiment with bold nail designs,&nbsp;<b>Nail Lab</b>&nbsp;in&nbsp;<b>Raleigh, NC 27615&nbsp;</b>ensures every individual leaves feeling rejuvenated with stunningly beautiful nails.&nbsp;</p>
     list_images:
@@ -50,7 +53,7 @@ content_blocks:
   - _block_name: section/ourservice
     status: true
     title: Our Services
-    background_color: '#94A3B8'
+    background_color: '#11141d'
     name_logo: NAIL LAB
     button:
       is_show: true
@@ -77,6 +80,7 @@ content_blocks:
 
   - _block_name: section/gallery
     status: true
+    background_color: '#11141d'
     title: Our Work
     button:
       is_show: true
@@ -86,4 +90,16 @@ content_blocks:
 
   - _block_name: section/comment
     status: true
-    title: Comment
+    background_image: '/images/background_section_comment.png'
+    background_color: '#11141d'
+    title: What customers say about us?
+    list_items:
+      - author: Sarah
+        avatar: '/images/background_section_comment.png'
+        description: 'The service was amazing! The staff was very professional and my nails look beautiful.'
+      - author: Jessica
+        avatar: '/images/background_section_comment.png'
+        description: "I can't believe I got my nails done at Nail Lab! They were so friendly and professional."
+      - author: Laura
+        avatar: '/images/background_section_comment.png'
+        description: 'I absolutely loved the design and the attention to detail in my nails. The staff was also great.'

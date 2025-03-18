@@ -12,9 +12,9 @@ seo:
 content_blocks:
   - _block_name: section/breadcrumb
     status: true
-    background:
-    color: '#000000'
-    image: 'https://blancnailboutiquelbk.com/wp-content/uploads/2023/10/Red_nail_designs-Header.webp'
+    background_color: '#11141d'
+    image: '/images/background_section_comment.png'
+    image_alt: image
     title: Social Media
     style: false
 

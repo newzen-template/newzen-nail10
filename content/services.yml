@@ -12,12 +12,9 @@ seo:
 content_blocks:
   - _block_name: section/breadcrumb
     status: true
-    background:
-      color: '#000000'
-      image: '/images/bg-nail-lab-5.png'
-    background_deco:
-      color: '#000000'
-      image: ''
+    background_color: '#11141d'
+    background_image: '/images/bg-nail-lab-5.png'
+    image_alt: image
     title: Menu Services
     style: true
 
@@ -61,6 +58,7 @@ content_blocks:
 
   - _block_name: services/pack
     status: true
+    background_color: '#11141d'
     menu:
       - name: MANICURE
         image: '/images/background_section_comment.png'
@@ -85,6 +83,7 @@ content_blocks:
 
   - _block_name: services/options
     status: true
+    background_color: '#11141d'
     description: For pricing, if you have an inspiration picture, please show us and we’ll tell you the exact price
     image: '/images/menu2.png'
     image_alt: menu 2
@@ -123,6 +122,7 @@ content_blocks:
 
   - _block_name: services/pack
     status: true
+    background_color: '#11141d'
     menu:
       - name: DIPPING POWDER
         image: '/images/menu3.png'
@@ -151,6 +151,7 @@ content_blocks:
 
   - _block_name: services/menu
     status: true
+    background_color: '#11141d'
     title: WAXING
     is_show_image: false
     menu:
@@ -181,6 +182,7 @@ content_blocks:
 
   - _block_name: services/food
     status: true
+    background_color: '#11141d'
     title: DRINKS
     is_two_column: true
     menu:
@@ -203,6 +205,7 @@ content_blocks:
 
   - _block_name: services/food
     status: true
+    background_color: '#11141d'
     title: NAIL LAB SIGNATURE COCKTAILS
     is_two_column: false
     menu:

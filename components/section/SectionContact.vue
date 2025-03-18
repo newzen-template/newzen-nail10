@@ -2,16 +2,20 @@
   <section
     v-if="block.status"
     :data-cms-bind="dataBinding"
-    class="contact-section container rounded d-flex justify-content-between align-items-center position-relative"
+    :style="{ backgroundColor: block.background_color, padding: '16px' }"
   >
-    <NuxtImg :src="block.logo" class="logo-image" :alt="block.logo_alt" />
-    <Button
-      class="contact-button"
-      :link="block.button.link"
-      :open_new_tab="block.button.open_new_tab"
-      :is_show="block.button.is_show"
-      :label="block.button.label"
-    />
+    <div
+      class="contact-section container rounded d-flex justify-content-between align-items-center position-relative"
+    >
+      <NuxtImg :src="block.logo" class="logo-image" :alt="block.logo_alt" />
+      <Button
+        class="contact-button"
+        :link="block.button.link"
+        :open_new_tab="block.button.open_new_tab"
+        :is_show="block.button.is_show"
+        :label="block.button.label"
+      />
+    </div>
   </section>
 </template>
 
@@ -34,7 +38,6 @@ import Button from '~/common/Button.vue';
   background-repeat: no-repeat;
   width: 100%;
   height: 122px;
-  margin-top: 12px;
   padding: 0 20px;
   background: #1c1e2a;
 

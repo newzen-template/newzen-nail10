@@ -1,7 +1,15 @@
 <template>
   <section
     class="testimonial-section position-relative"
-    style="padding: 120px 0"
+    :style="{
+      background: `linear-gradient(
+        120deg,
+        rgba(26, 30, 37, 0.65),
+        rgba(26, 30, 37, 0.15)
+      ),
+      url(${block.background_image}) center/cover no-repeat`,
+      padding: '120px 0',
+    }"
   >
     <div class="container">
       <div class="row">
@@ -27,7 +35,7 @@
               "
               class="section-title text-white fw-semibold pb-2"
             >
-              What customers say about us?
+              {{ block.title }}
             </h2>
             <swiper
               :modules="[SwiperAutoplay, SwiperPagination]"
@@ -42,7 +50,7 @@
               class="testimonial-swiper"
             >
               <swiper-slide
-                v-for="(testimonial, index) in testimonials"
+                v-for="(testimonial, index) in block.list_items"
                 :key="index"
               >
                 <div>
@@ -50,7 +58,7 @@
                     class="testimonial-text text-white fst-italic mb-4"
                     style="font-size: 20px"
                   >
-                    {{ testimonial.text }}
+                    {{ testimonial.description }}
                   </p>
                   <div class="d-flex align-items-center gap-3">
                     <div class="author-avatar rounded-circle overflow-hidden">
@@ -109,24 +117,6 @@ onMounted(() => {
   }
 });
 
-const testimonials = [
-  {
-    text: 'I came to get gems for my graduations nails. Everyone loves my nail!! I will be a loyal customer here.',
-    author: 'Karina',
-    avatar: '/images/background_section_comment.png',
-  },
-  {
-    text: 'The service was amazing! The staff was very professional and my nails look beautiful.',
-    author: 'Sarah',
-    avatar: '/images/background_section_comment.png',
-  },
-  {
-    text: 'Best nail salon in town! The attention to detail is incredible.',
-    author: 'Emma',
-    avatar: '/images/background_section_comment.png',
-  },
-];
-
 defineProps({
   block: {
     type: Object,
@@ -139,14 +129,6 @@ defineProps({
 @use '@/assets/style/_breakpoints.scss' as breakpoints;
 
 .testimonial-section {
-  padding: 120px 0;
-  background: linear-gradient(
-      120deg,
-      rgba(26, 30, 37, 0.65),
-      rgba(26, 30, 37, 0.15)
-    ),
-    url('/images/background_section_comment.png') center/cover no-repeat;
-
   .container {
     position: relative;
     z-index: 1;

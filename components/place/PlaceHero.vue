@@ -1,7 +1,7 @@
 <template>
   <section
     v-if="block.status"
-    :style="{ background: block.background_color, margin: '1rem 0' }"
+    :style="{ background: block.background_color }"
     :data-cms-bind="dataBinding"
     class="section"
   >

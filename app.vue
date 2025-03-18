@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen" style="background-color: #11141d">
+  <div class="min-h-screen">
     <NuxtLayout>
       <div>
         <NuxtLoadingIndicator />

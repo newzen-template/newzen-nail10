@@ -42,7 +42,7 @@
   transition: padding 0.3s ease;
 
   @include breakpoints.desktop-down {
-    padding-top: 80px;
+    padding-top: 84.5px;
   }
 
   @include breakpoints.tablet-down {

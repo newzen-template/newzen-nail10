@@ -2,6 +2,7 @@
   <section
     v-if="block.status"
     :data-cms-bind="dataBinding"
+    :style="{ backgroundColor: block.background_color }"
     class="about-section py-5"
   >
     <div class="container">

@@ -2,55 +2,41 @@
 spec:
   structures:
     - content_blocks
-  label: Hero Section
-  description: Hero Section
+  label: Comment Section
+  description: Comment Section
   icon: 'cottage'
 
 # Defines the structure of this component, as well as the default values
 blueprint:
   status: true
-  description: 'Experience the Grace and Beauty at NAIL LAB​'
-  image_1: /images/model-abc.png
-  image_alt_1: 'Image Hero 1'
-  image_2: /images/mani.svg
-  image_alt_2: 'Image Hero 2'
-  image_3: /images/Asset-1.png
-  image_alt_3: 'Image Hero 3'
-  button:
-    is_show: true
-    label: 'Booking Now'
-    open_new_tab: true
-    link: '/#'
+  title: What customers say about us?
+  background_color: '#11141d'
+  background_image: '/images/background_section_comment.png'
+  list_items:
+    - author: Sarah
+      avatar: '/images/background_section_comment.png'
+      description: 'The service was amazing! The staff was very professional and my nails look beautiful.'
+    - author: Jessica
+      avatar: '/images/background_section_comment.png'
+      description: "I can't believe I got my nails done at Nail Lab! They were so friendly and professional."
+    - author: Laura
+      avatar: '/images/background_section_comment.png'
+      description: 'I absolutely loved the design and the attention to detail in my nails. The staff was also great.'
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  description:
+  title:
     type: markdown
-    label: Content
-  image_1:
+    label: Title
+  list_images[*].author:
+    type: text
+    label: Author's Name
+  list_images[*].avatar:
     type: image
-    label: Image 1
-  image_2:
-    type: image
-    label: Image 2
-  image_3:
-    type: image
-    label: Image 3
-  image_alt_1:
-    type: text
-    label: Image 1
-  image_alt_2:
-    type: text
-    label: Image 2
-  image_alt_3:
-    type: text
-    label: Image 3
-  button.label:
-    type: text
-    label: Label
-  button.link:
-    type: text
-    label: Link
+    label: Author's Avatar
+  list_images[*].description:
+    type: markdown
+    label: Description

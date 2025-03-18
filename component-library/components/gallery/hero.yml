@@ -1,0 +1,45 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Our Works
+  description: Our Works
+  icon: 'cottage'
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  status: true
+  background_color: '#11141d'
+  image: '/images/background_section_comment.png'
+  image_alt: Image
+  gallery:
+    - label: Nails Design
+      item:
+        - image: /images/nail-lab-1-scaled.png
+          image_alt: Nails 1
+        - image: /images/nail-lab-2.png
+          image_alt: Nails 2
+        - image: /images/nail-lab-4.png
+          image_alt: Nails 3
+        - image: /images/ourwork1.png
+          image_alt: Nails 4
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  title:
+    type: text
+    label: Title
+  gallery:
+    label:
+      type: text
+      label: Gallery
+    item:
+      image:
+        type: image
+        label: Image
+      image_alt:
+        type: text
+        label: Image Alt

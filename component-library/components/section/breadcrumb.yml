@@ -2,14 +2,18 @@
 spec:
   structures:
     - content_blocks
-  label: Contact Section
-  description: Contact Section
+  label: Breadcrumb Section
+  description: Breadcrumb Section
   icon: 'cottage'
 
 # Defines the structure of this component, as well as the default values
 blueprint:
   status: true
-  title:
+  background_color: '#11141d'
+  image: '/images/background_section_comment.png'
+  image_alt: image
+  title: Our Place
+  style: false
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
