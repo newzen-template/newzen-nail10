@@ -13,8 +13,6 @@ content_blocks:
   - _block_name: section/breadcrumb
     status: true
     background_color: '#11141d'
-    background_image: '/images/bg-nail-lab-5.png'
-    image_alt: image
     title: Menu Services
     style: true
 

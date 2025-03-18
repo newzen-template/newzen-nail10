@@ -2,8 +2,8 @@
 spec:
   structures:
     - content_blocks
-  label: Our Works
-  description: Our Works
+  label: Works Hero
+  description: Works Hero
   icon: 'cottage'
 
 # Defines the structure of this component, as well as the default values

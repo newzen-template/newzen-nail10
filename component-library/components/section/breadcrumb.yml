@@ -10,8 +10,6 @@ spec:
 blueprint:
   status: true
   background_color: '#11141d'
-  image: '/images/background_section_comment.png'
-  image_alt: image
   title: Our Place
   style: false
 
@@ -20,15 +18,9 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  logo:
-    type: image
-    label: Logo
-  logo_alt:
-    type: text
-    label: Logo Alt
   button.label:
     type: text
     label: Label
-  button.link:
-    type: text
-    label: Link
+  style:
+    type: toggle
+    label: Style

@@ -2,8 +2,8 @@
 spec:
   structures:
     - content_blocks
-  label: Our Place
-  description: Our Place
+  label: Place Hero
+  description: Place Hero
   icon: 'cottage'
 
 # Defines the structure of this component, as well as the default values

@@ -2,8 +2,8 @@
 spec:
   structures:
     - content_blocks
-  label: Menu Services
-  description: Menu Services
+  label: Menu Services 4
+  description: Menu Services 4
   icon: 'cottage'
 
 # Defines the structure of this component, as well as the default values
@@ -24,11 +24,11 @@ _inputs:
     type: text
     label: Title
   is_two_column:
-    type: boolean
+    type: toggle
     label: Two Column Layout
   menu[*].name:
     type: text
     label: Name
   menu[*].description:
-    type: textarea
+    type: markdown
     label: Description

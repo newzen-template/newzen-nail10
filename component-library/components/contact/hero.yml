@@ -2,17 +2,15 @@
 spec:
   structures:
     - content_blocks
-  label: Menu Services
-  description: Menu Services
+  label: Contact Hero
+  description: Contact Hero
   icon: 'cottage'
 
 # Defines the structure of this component, as well as the default values
 blueprint:
   status: true
   title: Get in touch and let us know how we can help.
-  sub_title: Image Gallery
   background_color: '#11141d'
-  title_button: View More
   address: 9414 Falls of Neuse Rd Ste 100, Raleigh, NC 27615, United States
   mail: naillabraleigh@icloud.com
   phone: (919) 336-9999

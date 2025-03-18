@@ -3,7 +3,7 @@
     v-if="block.status"
     :style="{ background: block.background_color }"
     :data-cms-bind="dataBinding"
-    class="py-4 contact-section"
+    class="py-4"
   >
     <div class="container-md">
       <div class="row">
@@ -80,11 +80,6 @@ defineProps<Props>();
 </script>
 
 <style scoped>
-.contact-section {
-  background-color: #1a1d21 !important;
-  color: #fff;
-}
-
 .title {
   font-size: 37px;
   font-weight: 700;
