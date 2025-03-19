@@ -126,22 +126,11 @@ function getCurrentPageText(): string {
 }
 
 .hero-section {
-  margin-top: 82px;
-  padding-top: 20px;
   height: 528px;
   background-image: url('/images/bg-nail-lab.1.png');
   background-position: bottom center;
   background-repeat: no-repeat;
   overflow: hidden;
-
-  @include breakpoints.mobile-down {
-    padding-top: 20px;
-    margin-top: 84.5px;
-  }
-
-  @include breakpoints.tablet-down {
-    margin-top: 50px;
-  }
 }
 
 .row {
@@ -209,7 +198,7 @@ function getCurrentPageText(): string {
   }
 
   @include breakpoints.tablet-down {
-    width: 32% !important;
+    width: 40% !important;
   }
 }
 

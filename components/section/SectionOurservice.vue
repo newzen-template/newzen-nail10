@@ -9,7 +9,7 @@
       class="container-md text-white d-flex flex-column gap-4 align-items-center"
     >
       <div class="text-center">
-        <h6 class="text-primary">{{ block.name_logo }}</h6>
+        <h6 class="text-main">{{ block.name_logo }}</h6>
         <h2
           class="service-title"
           style="

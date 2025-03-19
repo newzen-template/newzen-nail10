@@ -4,8 +4,10 @@
     class="main-header w-100 d-flex align-items-center"
     :style="{ backgroundColor: headerData.background_color }"
   >
-    <div class="container">
-      <nav class="navbar d-flex justify-content-between align-items-center">
+    <div class="container h-100">
+      <nav
+        class="navbar d-flex h-100 justify-content-between align-items-center flex-nowrap"
+      >
         <NuxtLink to="https://naillabnc.com" class="navbar-brand">
           <img src="/images/logo.png" alt="NailLab NC" class="logo" />
         </NuxtLink>
@@ -25,7 +27,7 @@
                 :target="header.open_new_tab ? '_blank' : ''"
                 itemprop="url"
                 :class="{
-                  'text-primary': route.path === header.link,
+                  'text-main': route.path === header.link,
                   'text-white': route.path !== header.link,
                 }"
               >
@@ -45,7 +47,7 @@
         <div class="d-flex align-items-center gap-3">
           <!-- Mobile Menu Button -->
           <Button
-            :is_show="isMobileView"
+            :is_show="checkMobile"
             size="24"
             class="menu-toggle phone-button d-lg-none d-block"
             @click="toggleMobileMenu"
@@ -58,7 +60,7 @@
           <Button
             :is_show="headerData.button.is_show"
             color="white"
-            :label="isMobileView ? '' : headerData.button.text"
+            :label="isMobileView ? headerData.button.text : ''"
             class="phone-button"
           >
             <i
@@ -241,8 +243,8 @@ watch(
 const isMobileView = ref(false);
 
 const checkScreenSize = () => {
-  checkMobile.value = window.innerWidth <= 1024;
-  isMobileView.value = window.innerWidth <= 1024;
+  checkMobile.value = window.innerWidth < 1024;
+  isMobileView.value = window.innerWidth > 1024;
 };
 
 onMounted(() => {

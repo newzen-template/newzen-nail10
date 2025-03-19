@@ -3,8 +3,8 @@
     <MainHeader class="header-transparent main-header" />
     <main class="grow main-content">
       <slot />
+      <MainFooter />
     </main>
-    <MainFooter />
   </div>
 </template>
 
@@ -24,14 +24,7 @@
 
 .main-header {
   transition: all 0.3s ease;
-
-  @include breakpoints.desktop-down {
-    height: 84.5px;
-  }
-
-  @include breakpoints.tablet-down {
-    height: 75px;
-  }
+  height: 84.5px;
 
   @include breakpoints.mobile-down {
     height: 70px;
@@ -40,17 +33,10 @@
 
 .main-content {
   transition: padding 0.3s ease;
-
-  @include breakpoints.desktop-down {
-    padding-top: 84.5px;
-  }
-
-  @include breakpoints.tablet-down {
-    padding-top: 20px;
-  }
+  padding-top: 84.5px;
 
   @include breakpoints.mobile-down {
-    padding-top: 0px;
+    padding-top: 70px;
   }
 }
 </style>

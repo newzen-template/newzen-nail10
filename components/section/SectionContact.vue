@@ -56,7 +56,6 @@ import Button from '~/common/Button.vue';
     padding: 20px !important;
     flex-direction: column;
     gap: 20px;
-    margin: 24px 0 !important;
     background-position: center right;
   }
 }

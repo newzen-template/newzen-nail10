@@ -16,8 +16,6 @@
         backgroundRepeat: 'no-repeat',
         overflow: !block.style ? 'hidden' : '',
         backgroundSize: !block.style ? 'contain' : 'auto',
-        paddingTop: '160px',
-        paddingBottom: '120px',
       }"
       class="breadcrumb-section rounded-bottom-5 position-relative d-flex align-items-center justify-content-center flex-column"
     >
@@ -49,19 +47,14 @@ defineProps<Props>();
 @use '@/assets/style/_breakpoints.scss' as breakpoints;
 
 .breadcrumb-section {
-  @include breakpoints.desktop-down {
-    padding-top: 140px !important;
-    padding-bottom: 100px !important;
-  }
+  padding: 120px 0;
 
   @include breakpoints.tablet-down {
-    padding-top: 120px !important;
-    padding-bottom: 80px !important;
+    padding: 80px 0;
   }
 
   @include breakpoints.mobile-down {
-    padding-top: 80px !important;
-    padding-bottom: 30px !important;
+    padding: 40px 0;
   }
 }
 
@@ -135,18 +128,10 @@ defineProps<Props>();
     background-image: url('/images/bg-nail-lab-5.png');
     z-index: 5;
     background-size: cover;
-
-    @include breakpoints.tablet-down {
-      top: -60px;
-    }
-
-    @include breakpoints.mobile-down {
-      top: -40px;
-    }
   }
 
   &-no-style {
-    top: 20px;
+    top: 0;
     right: -450px;
     background-image: url('/images/bg-nail-lab-3.png');
     background-size: cover;
