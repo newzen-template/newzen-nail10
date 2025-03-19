@@ -5,14 +5,15 @@
     :style="{ backgroundColor: block.background_color }"
     class="about-section py-5"
   >
-    <div class="container">
+    <div class="container" itemscope itemtype="http://schema.org/AboutPage">
       <div class="row h-100 align-items-center">
         <div class="col-lg-6 text-white mb-4 mb-lg-0">
-          <h2 class="display-4 fw-bold mb-4 about-title">
+          <h2 class="display-4 fw-bold mb-4 about-title" itemprop="name">
             {{ block.title }}
           </h2>
           <div
             v-html="block.description"
+            itemprop="description"
             class="lead text-secondary about-text ckeditor-custom"
           ></div>
         </div>

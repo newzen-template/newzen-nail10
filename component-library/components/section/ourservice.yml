@@ -14,6 +14,7 @@ blueprint:
   button:
     is_show: true
     label: 'View All Services'
+    background_items: 'red'
     open_new_tab: true
     link: '/services'
   list_items:
@@ -42,6 +43,9 @@ _inputs:
   title:
     type: text
     label: Content
+  background_items:
+    type: color
+    label: Background Items
   list_images[*].title:
     type: text
     label: Title 1

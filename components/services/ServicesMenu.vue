@@ -4,16 +4,18 @@
     :style="{ background: block?.background_color }"
     :data-cms-bind="dataBinding"
   >
-    <div class="container">
+    <div class="container" itemscope itemtype="http://schema.org/Service">
+      <meta itemprop="serviceType" :content="businessType" />
       <div v-if="block.is_show_image">
         <NuxtImg
+          itemprop="image"
           class="image-menu"
           :src="block?.image || ' '"
           :alt="block?.image_alt || ' '"
           style="width: 100%; border-radius: 25px"
         />
       </div>
-      <h2 class="text-center text-white title-menu">
+      <h2 class="text-center text-white title-menu" itemprop="name">
         {{ block.title }}
       </h2>
 
@@ -50,6 +52,7 @@
         style="font-size: 16px; font-style: italic"
       >
         <p
+          itemprop="description"
           class="mb-1 description-menu ckeditor-custom"
           v-html="block?.description || ' '"
         ></p>
@@ -60,6 +63,7 @@
 
 <script lang="ts" setup>
 import { onMounted } from 'vue';
+import SITE from '@/data/site.json';
 
 interface Props {
   dataBinding: any;
@@ -67,6 +71,12 @@ interface Props {
 }
 
 const props = defineProps<Props>();
+
+const dataSite: any = ref(SITE);
+const firstKey = Object.keys(SITE)[0];
+const lengthType = dataSite.value[firstKey].business_type.split('/').length;
+const businessType =
+  dataSite.value[firstKey].business_type.split('/')[lengthType - 1];
 
 onMounted(() => {
   const observer = new IntersectionObserver(
@@ -181,6 +191,7 @@ onMounted(() => {
 .menu-description {
   font-size: 14px;
   line-height: 1.4;
+  color: var(--color-secondary-text);
 
   @include breakpoints.mobile {
     font-size: 12px;
@@ -206,6 +217,7 @@ onMounted(() => {
 
 .description-menu {
   font-size: 14px;
+  color: var(--color-secondary-text);
 
   @include breakpoints.mobile {
     font-size: 12px;

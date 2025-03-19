@@ -3,7 +3,7 @@
     v-if="block.status"
     :style="{ background: block.background_color }"
     :data-cms-bind="dataBinding"
-    style="padding: 40px 0; background-color: #1c1e2a"
+    style="padding: 40px 0"
   >
     <div
       class="container-md text-white d-flex flex-column gap-4 align-items-center"
@@ -28,7 +28,10 @@
           class="col-12 col-md-3 my-2 animation-element"
         >
           <div
-            style="background-color: #12141d80; padding: 52px 32px"
+            :style="{
+              backgroundColor: block.background_items,
+              padding: '52px 32px',
+            }"
             class="d-flex justify-content-center align-items-center rounded flex-column gap-3"
           >
             <NuxtImg

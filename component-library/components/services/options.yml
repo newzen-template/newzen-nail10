@@ -9,12 +9,12 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   status: true
-  description: For pricing, if you have an inspiration picture, please show us and we’ll tell you the exact price
   image: '/images/menu2.png'
   image_alt: menu 2
   note: Price is based upon the time consumption and details. We’ll let you know the exact price before proceeding
   list_items:
     - name: ACRYLIC
+      description: For pricing, if you have an inspiration picture, please show us and we’ll tell you the exact price
       menu:
         - title: Full Set
           price: $70+
@@ -24,9 +24,6 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  description:
-    type: markdown
-    label: Description
   image:
     type: image
     label: Image
@@ -39,6 +36,9 @@ _inputs:
   list_items[*].name:
     type: text
     label: Name
+  list_items[*].description:
+    type: text
+    label: Description
   list_items[*].menu[*].title:
     type: text
     label: Title

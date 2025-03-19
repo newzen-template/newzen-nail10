@@ -37,28 +37,40 @@
         "is_show": true,
         "label": "Contact Us",
         "list_items": [
-          { "title": "(919) 336-9999", "icon_name": "/images/phone-504.svg" },
+          {
+            "title": "(919) 336-9999",
+            "icon_name": "/images/phone-504.svg",
+            "link": "tel:+19193369999",
+            "item_prop": "telephone"
+          },
           {
             "title": "naillabraleigh@icloud.com",
-            "icon_name": "/images/mail-2544.svg"
+            "icon_name": "/images/mail-2544.svg",
+            "link": "mailto:naillabraleigh@icloud.com",
+            "item_prop": "email"
           },
           {
             "title": "9414 Falls of Neuse Rd Ste 100, Raleigh, NC 27615, United States",
-            "icon_name": "/images/location-pointer-2961.svg"
-          }
-        ]
-      },
-      {
-        "is_show": true,
-        "label": "Business hours",
-        "list_items": [
-          { "title": "Mon – Sat: 9:30 AM – 7:30 PM" },
-          {
-            "title": "Sun: 12 AM – 5:30 PM"
+            "icon_name": "/images/location-pointer-2961.svg",
+            "item_prop": "streetAddress"
           }
         ]
       }
     ],
+    "hour": {
+      "label": "Business hours",
+      "list_hour": [
+        {
+          "label": "Mon - Sat: ",
+          "time": "9:30 am - 7:00 pm"
+        },
+        {
+          "label": "Sunday:",
+          "time": "Closed"
+        }
+      ]
+    },
+
     "nav": {
       "label": "Quick Links",
       "list_nav": [

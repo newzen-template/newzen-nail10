@@ -5,11 +5,12 @@
     :data-cms-bind="dataBinding"
     class="py-4 menu-section"
   >
-    <div class="container-md">
+    <div class="container-md" itemscope itemtype="http://schema.org/Service">
       <div class="row g-4">
         <!-- Left side - Image -->
         <div class="col-lg-6 text-center">
           <img
+            itemprop="image"
             :src="block.image"
             :alt="block.image_alt"
             class="img-fluid rounded shadow-sm menu-image"
@@ -23,12 +24,11 @@
             :key="sectionIndex"
             class="menu-section"
           >
-            <h2 class="text-white mb-3 section-title">{{ section.name }}</h2>
-            <p
-              v-if="sectionIndex === 0"
-              class="text-info mb-4 text-center text-secondary description"
-            >
-              {{ block.description }}
+            <h2 class="text-white mb-3 section-title">
+              {{ section.name }}
+            </h2>
+            <p class="text-info mb-4 text-center text-secondary description">
+              {{ section?.description || '' }}
             </p>
 
             <div
@@ -45,7 +45,10 @@
           </div>
 
           <!-- Note at bottom -->
-          <p class="text-info fst-italic mt-4 text-center text-secondary note">
+          <p
+            itemprop="description"
+            class="text-info fst-italic mt-4 text-center text-secondary note"
+          >
             {{ block.note }}
           </p>
         </div>
@@ -55,6 +58,14 @@
 </template>
 
 <script lang="ts" setup>
+import SITE from '@/data/site.json';
+
+const dataSite: any = ref(SITE);
+const firstKey = Object.keys(SITE)[0];
+const lengthType = dataSite.value[firstKey].business_type.split('/').length;
+const businessType =
+  dataSite.value[firstKey].business_type.split('/')[lengthType - 1];
+
 interface Props {
   dataBinding: any;
   block: any;
@@ -94,6 +105,7 @@ defineProps<Props>();
 .description {
   font-size: 18px;
   line-height: 1.6;
+  color: var(--color-secondary-text);
 
   @include breakpoints.desktop-down {
     font-size: 16px;

@@ -35,7 +35,7 @@
               "
               class="section-title text-white fw-semibold pb-2"
             >
-              <div v-html="block.title"></div>
+              <div v-html="block.title" class="ckeditor-custom"></div>
             </h2>
             <swiper
               :modules="[SwiperAutoplay, SwiperPagination]"

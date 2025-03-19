@@ -7,6 +7,7 @@ defineProps({
   size: String,
   open_new_tab: Boolean,
   is_show: Boolean,
+  itemprop: String,
 });
 </script>
 
@@ -21,8 +22,8 @@ defineProps({
       class="text-white"
     >
       <slot></slot>
-      {{ label }}</NuxtLink
-    >
+      <span :itemprop="itemprop">{{ label }}</span>
+    </NuxtLink>
   </button>
 </template>
 

@@ -4,7 +4,8 @@
     :style="{ background: block.background_color }"
     :data-cms-bind="dataBinding"
   >
-    <div class="container-md">
+    <div class="container-md" itemscope itemtype="http://schema.org/Service">
+      <meta itemprop="serviceType" :content="businessType" />
       <div class="row g-4">
         <!-- Manicure Column -->
         <div
@@ -15,6 +16,7 @@
           <div class="menu-section text-white">
             <div class="menu-image mb-4">
               <NuxtImg
+                itemprop="image"
                 :src="menuItem.image"
                 :alt="menuItem.image_alt"
                 class="img-fluid w-100 rounded"
@@ -28,7 +30,7 @@
                 padding: 10px;
               "
             >
-              <h2 class="text-center mb-3 title-menu">
+              <h2 itemprop="name" class="text-center mb-3 title-menu">
                 {{ menuItem.name }}
               </h2>
 
@@ -72,6 +74,14 @@
 </template>
 
 <script lang="ts" setup>
+import SITE from '@/data/site.json';
+
+const dataSite: any = ref(SITE);
+const firstKey = Object.keys(SITE)[0];
+const lengthType = dataSite.value[firstKey].business_type.split('/').length;
+const businessType =
+  dataSite.value[firstKey].business_type.split('/')[lengthType - 1];
+
 interface Props {
   dataBinding: any;
   block: any;

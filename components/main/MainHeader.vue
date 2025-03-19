@@ -8,13 +8,22 @@
       <nav
         class="navbar d-flex h-100 justify-content-between align-items-center flex-nowrap"
       >
-        <NuxtLink to="https://naillabnc.com" class="navbar-brand">
-          <img src="/images/logo.png" alt="NailLab NC" class="logo" />
+        <NuxtLink
+          itemprop="url"
+          to="https://naillabnc.com"
+          class="navbar-brand"
+        >
+          <img
+            itemprop="logo"
+            src="/images/logo.png"
+            alt="NailLab NC"
+            class="logo"
+          />
         </NuxtLink>
 
         <!-- Desktop Menu -->
         <div class="menu-desktop d-none d-lg-block w-100">
-          <ul class="d-flex list-unstyled">
+          <ul class="d-flex list-unstyled m-0">
             <li
               v-for="(header, index) of headerData.items"
               :key="index"
@@ -60,13 +69,16 @@
           <Button
             :is_show="headerData.button.is_show"
             color="white"
-            :label="isMobileView ? headerData.button.text : ''"
+            :itemprop="'telephone'"
             class="phone-button"
           >
             <i
               style="font-size: 16px !important"
-              class="bi bi-telephone-fill"
+              class="bi bi-telephone-fill me-2"
             ></i>
+            <span itemprop="telephone">{{
+              isMobileView ? headerData.button.text : ''
+            }}</span>
           </Button>
         </div>
 
@@ -89,6 +101,7 @@
                   class="mobile-menu__item"
                 >
                   <NuxtLink
+                    itemprop="url"
                     :to="header.link"
                     :target="header.open_new_tab ? '_blank' : ''"
                     class="mobile-menu__link"

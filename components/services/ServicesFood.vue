@@ -5,8 +5,12 @@
     :style="{ background: block.background_color }"
     :data-cms-bind="dataBinding"
   >
-    <div class="container-md">
-      <h2 class="text-center text-white display-4 mb-3 section-title">
+    <div class="container-md" itemscope itemtype="http://schema.org/Service">
+      <meta itemprop="serviceType" :content="businessType" />
+      <h2
+        class="text-center text-white display-4 mb-3 section-title"
+        itemprop="name"
+      >
         {{ block.title }}
       </h2>
       <div class="row g-4">
@@ -36,6 +40,14 @@
 </template>
 
 <script lang="ts" setup>
+import SITE from '@/data/site.json';
+
+const dataSite: any = ref(SITE);
+const firstKey = Object.keys(SITE)[0];
+const lengthType = dataSite.value[firstKey].business_type.split('/').length;
+const businessType =
+  dataSite.value[firstKey].business_type.split('/')[lengthType - 1];
+
 interface Props {
   dataBinding: any;
   block: any;

@@ -82,12 +82,13 @@ content_blocks:
   - _block_name: services/options
     status: true
     background_color: '#11141d'
-    description: For pricing, if you have an inspiration picture, please show us and we’ll tell you the exact price
+
     image: '/images/menu2.png'
     image_alt: menu 2
     note: Price is based upon the time consumption and details. We’ll let you know the exact price before proceeding
     list_items:
       - name: ACRYLIC
+        description: For pricing, if you have an inspiration picture, please show us and we’ll tell you the exact price
         menu:
           - title: Full Set
             price: $70+

@@ -18,6 +18,7 @@
                 :key="itemIndex"
               >
                 <NuxtLink
+                  itemprop="url"
                   :to="item?.link"
                   :target="item?.is_new_tab ? '_blank' : '_self'"
                   class="social-link"
@@ -47,8 +48,13 @@
                     class="contact-info"
                     v-for="(item, itemIndex) in section.list_items"
                     :key="itemIndex"
+                    v-bind="
+                      item?.item_prop?.includes('streetAddress') &&
+                      handleRenderAttribute
+                    "
                   >
                     <NuxtLink
+                      itemprop="url"
                       :to="item.link"
                       class="contact-link d-flex align-items-center gap-2"
                     >
@@ -58,19 +64,36 @@
                         :src="item?.icon_name"
                         alt="icon"
                       />
-                      <span style="font-size: 14px">{{ item.title }}</span>
+                      <span
+                        :itemprop="item?.item_prop"
+                        style="font-size: 14px"
+                        >{{ item.title }}</span
+                      >
                     </NuxtLink>
                   </div>
                 </template>
-                <template v-else-if="section.hours">
-                  <div class="hours-info">
-                    <p
-                      v-for="(hour, hourIndex) in section.hours"
-                      :key="hourIndex"
-                      class="mb-2"
+              </div>
+              <div class="contact-item d-flex flex-column gap-1">
+                <h5 class="section-title" style="font-size: 21px; color: #fff">
+                  {{ footerData.hour.label }}
+                </h5>
+                <template v-if="footerData.hour.list_hour">
+                  <div
+                    class="contact-info"
+                    v-for="(item, itemIndex) in footerData.hour.list_hour"
+                    :key="itemIndex"
+                    itemprop="openingHours"
+                    :content="item.label + ' ' + item.time"
+                  >
+                    <NuxtLink
+                      itemprop="url"
+                      :to="item.link"
+                      class="contact-link d-flex align-items-center gap-2"
                     >
-                      {{ hour }}
-                    </p>
+                      <span style="font-size: 14px"
+                        >{{ item.label }} {{ item.time }}</span
+                      >
+                    </NuxtLink>
                   </div>
                 </template>
               </div>
@@ -99,8 +122,11 @@
     <div class="copyright py-3">
       <div class="container text-center">
         © 2024 NAIL LAB design by NailSoft • All Rights Reserved |
-        <NuxtLink to="#" class="text-secondary">nail salon in 27615</NuxtLink> |
-        <NuxtLink to="#" class="text-secondary"
+        <NuxtLink itemprop="url" to="#" class="text-secondary"
+          >nail salon in 27615</NuxtLink
+        >
+        |
+        <NuxtLink itemprop="url" to="#" class="text-secondary"
           >best nail salon in 27615</NuxtLink
         >
       </div>
