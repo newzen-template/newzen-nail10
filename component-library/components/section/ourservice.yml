@@ -10,11 +10,11 @@ spec:
 blueprint:
   status: true
   title: Our Services
-  name: NAIL LAB
+  sub_title: NAIL LAB
   button:
     is_show: true
     label: 'View All Services'
-    background_items: 'red'
+    background_items: '#11141d'
     open_new_tab: true
     link: '/services'
   list_items:
@@ -22,18 +22,6 @@ blueprint:
       title: Manicure
       image_alt: Nail service 1
       link: /services/#mani
-    - image: /images/Asset-1.png
-      title: Pedicure
-      image_alt: Nail service 2
-      link: /services/#pedicure
-    - image: /images/asset-2.svg
-      title: Dipping
-      image_alt: Nail service 3
-      link: /services/#dipping
-    - image: /images/asset-3.svg
-      title: Waxing
-      image_alt: Nail service 4
-      link: /services/#waxing
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -42,7 +30,10 @@ preview:
 _inputs:
   title:
     type: text
-    label: Content
+    label: Title
+  sub_title:
+    type: text
+    label: Name Store
   background_items:
     type: color
     label: Background Items

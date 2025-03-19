@@ -11,7 +11,7 @@ content_blocks:
   - _block_name: section/hero
     status: true
     background_color: '#11141d'
-    description: 'Experience the Grace and Beauty at NAIL LAB​'
+    description: 'Experience the Grace and Beauty at NAIL LAB'
     image_1: /images/model-abc.png
     image_alt_1: 'Image Hero 1'
     image_2: /images/mani.svg
@@ -92,7 +92,8 @@ content_blocks:
     status: true
     background_image: '/images/background_section_comment.png'
     background_color: '#11141d'
-    title: What customers say about us?
+    title: TESTIMONIAL
+    sub_title: What customers say about us?
     list_items:
       - author: Sarah
         avatar: '/images/background_section_comment.png'

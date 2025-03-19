@@ -23,7 +23,7 @@
         v-if="block.style"
         class="nail-lab-badge border-primary text-white rounded-pill text-center fw-normal slide-up-animation-h6"
       >
-        NAIL LAB
+        {{ block.sub_title || '' }}
       </h6>
       <h1 class="text-white text-center slide-up-animation-h1">
         {{ block.title }}

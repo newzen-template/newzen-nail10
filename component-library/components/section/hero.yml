@@ -10,7 +10,7 @@ spec:
 blueprint:
   status: true
   background_color: '#11141d'
-  description: 'Experience the Grace and Beauty at NAIL LAB​'
+  description: 'Experience the Grace and Beauty at NAIL LAB'
   image_1: /images/model-abc.png
   image_alt_1: 'Image Hero 1'
   image_2: /images/mani.svg

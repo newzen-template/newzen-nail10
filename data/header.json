@@ -64,10 +64,6 @@
       "open_new_tab": false
     },
 
-    "search": {
-      "is_show": true,
-      "title": "Search..."
-    },
     "_inputs": {
       "icon": {
         "type": "image"

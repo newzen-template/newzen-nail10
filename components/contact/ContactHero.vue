@@ -15,55 +15,28 @@
           </h2>
 
           <!-- Map Info -->
-          <div class="contact-item d-flex align-items-start mb-4">
-            <div class="icon-wrapper">
-              <i style="font-size: 24px;" class="bi bi-geo-alt-fill"></i>
-            </div>
-            <div class="contact-content">
-              <NuxtLink to="/" class="contact-title">Map</NuxtLink to="">
-              <p class="contact-text">
-                {{ block.address }}
-              </p>
-            </div>
-          </div>
-
-          <!-- Email Info -->
-          <div class="contact-item d-flex align-items-start mb-4">
-            <div class="icon-wrapper">
-              <i style="font-size: 24px;" class="bi bi-envelope-fill"></i>
-            </div>
-            <div class="contact-content">
-              <NuxtLink to="/" class="contact-title">Email us</NuxtLink to="">
-              <p class="contact-text">
-                {{ block.mail }}
-              </p>
-            </div>
-          </div>
-
-          <!-- Phone Info -->
-          <div class="contact-item d-flex align-items-start">
-            <div class="icon-wrapper">
-              <i style="font-size: 24px;" class="bi bi-telephone-fill"></i>
-            </div>
-            <div class="contact-content">
-              <NuxtLink to="/" class="contact-title">Phone</NuxtLink to="">
-              <p class="contact-text">
-                {{ block.phone }}
-              </p>
-            </div>
+          <div
+            class="contact-item d-flex align-items-start mb-4"
+            v-for="item in block.menu_items"
+            :key="item.label"
+          >
+            <NuxtLink to="/" class="contact-content"
+              >{{ item.label }}
+              <img
+                width="20"
+                height="20"
+                :src="item.image"
+                alt="icon"
+                class="contact-image"
+              />
+              <span class="contact-text">
+                {{ item.content }}
+              </span>
+            </NuxtLink>
           </div>
         </div>
-
-        <!-- Right Column -->
         <div class="col-md-7">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30669.193637388995!2d-78.603077!3d35.900957!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac5752d88602b3%3A0xf4b931a748e2dc2c!2sNAIL%20LAB%20-%20Luxury%20Nail%20Bar!5e1!3m2!1sen!2sus!4v1741341715935!5m2!1sen!2sus"
-            width="100%"
-            height="485"
-            style="border: 0"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div v-html="block.map"></div>
         </div>
       </div>
     </div>
@@ -105,7 +78,7 @@ defineProps<Props>();
 }
 
 .contact-item:hover {
-  transform: translateX(5px);
+  cursor: pointer;
 }
 
 .icon-wrapper {
@@ -124,7 +97,9 @@ defineProps<Props>();
 }
 
 .contact-content {
-  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .contact-title {
@@ -145,16 +120,6 @@ defineProps<Props>();
   color: var(--color-secondary-text);
   margin: 0;
   line-height: 1.5;
-}
-
-.contact-text a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contact-text a:hover {
-  color: #74b1c1;
 }
 
 @media (max-width: 768px) {

@@ -5,30 +5,12 @@
     "logo": "/images/logo.png",
     "logo_alt": "Logo alt",
     "description": "Nail Lab nail salon in Raleigh, NC 27615 is a premier destination for those seeking top-quality nail services in a chic and relaxing environment. Whether one desires a classic French manicure or wants to experiment with bold nail designs, Nail Lab in Raleigh, NC 27615ensures every individual leaves feeling rejuvenated with stunningly beautiful nails.",
+    "map": "<iframe src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30669.193637388995!2d-78.603077!3d35.900957!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac5752d88602b3%3A0xf4b931a748e2dc2c!2sNAIL%20LAB%20-%20Luxury%20Nail%20Bar!5e1!3m2!1sen!2sus!4v1741341715935!5m2!1sen!2sus' width='100%' height='320' style='border:0' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>",
     "social": [
       {
-        "icon_name": "/images/facebook-svgrepo-com.svg",
-        "is_new_tab": true,
-        "link": "https://www.facebook.com"
-      },
-      {
-        "icon_name": "/images/facebook-svgrepo-com.svg",
-        "is_new_tab": true,
-        "link": "https://www.facebook.com"
-      },
-      {
-        "icon_name": "/images/facebook-svgrepo-com.svg",
-        "is_new_tab": true,
-        "link": "https://www.facebook.com"
-      },
-      {
-        "icon_name": "/images/facebook-svgrepo-com.svg",
-        "is_new_tab": true,
-        "link": "https://www.facebook.com"
-      },
-      {
-        "icon_name": "/images/facebook-svgrepo-com.svg",
-        "is_new_tab": true,
+        "image": "/images/facebook-svgrepo-com.svg",
+        "image_alt": "Facebook",
+        "open_new_tab": true,
         "link": "https://www.facebook.com"
       }
     ],
@@ -39,19 +21,22 @@
         "list_items": [
           {
             "title": "(919) 336-9999",
-            "icon_name": "/images/phone-504.svg",
+            "image": "/images/phone-504.svg",
+            "image_alt": "Phone",
             "link": "tel:+19193369999",
             "item_prop": "telephone"
           },
           {
             "title": "naillabraleigh@icloud.com",
-            "icon_name": "/images/mail-2544.svg",
+            "image": "/images/mail-2544.svg",
+            "image_alt": "Email",
             "link": "mailto:naillabraleigh@icloud.com",
             "item_prop": "email"
           },
           {
             "title": "9414 Falls of Neuse Rd Ste 100, Raleigh, NC 27615, United States",
-            "icon_name": "/images/location-pointer-2961.svg",
+            "image": "/images/location-pointer-2961.svg",
+            "image_alt": "Location",
             "item_prop": "streetAddress"
           }
         ]
@@ -71,107 +56,6 @@
       ]
     },
 
-    "nav": {
-      "label": "Quick Links",
-      "list_nav": [
-        {
-          "label": "About Our Company",
-          "link": "/#",
-          "open_new_tab": false
-        },
-        {
-          "label": "Wishlist",
-          "link": "/#",
-          "open_new_tab": false
-        },
-        {
-          "label": "Cart",
-          "link": "/#",
-          "open_new_tab": false
-        },
-        {
-          "label": "Flash Offers",
-          "link": "/#",
-          "open_new_tab": false
-        },
-        {
-          "label": "Terms & Condition",
-          "link": "/#",
-          "open_new_tab": false
-        },
-        {
-          "label": "Privacy Policy",
-          "link": "/#",
-          "open_new_tab": false
-        }
-      ]
-    },
-    "catagories": {
-      "label": "Categories",
-      "list_categories": [
-        {
-          "label": "Fruit & Vegetables",
-          "link": "/#",
-          "open_new_tab": false
-        },
-        {
-          "label": "Fresh Fruits",
-          "link": "/#",
-          "open_new_tab": false
-        },
-        {
-          "label": "Biscuits & Snacks",
-          "link": "/#",
-          "open_new_tab": false
-        },
-        {
-          "label": "Organic Food",
-          "link": "/#",
-          "open_new_tab": false
-        },
-        {
-          "label": "Grocery & Staples",
-          "link": "/#",
-          "open_new_tab": false
-        },
-        {
-          "label": "Milks And Dairies",
-          "link": "/#",
-          "open_new_tab": false
-        }
-      ]
-    },
-    "newsletter": {
-      "label": "Newsletter",
-      "open": [
-        {
-          "label": "",
-          "time": "10:00 am - 7:00pm"
-        }
-      ],
-      "phone": {
-        "is_show": true,
-        "label": "+585 695 023 52"
-      }
-    },
-    "payment": [
-      {
-        "image": "/images/visa.png",
-        "image_alt": ""
-      },
-      {
-        "image": "/images/visa1.png",
-        "image_alt": ""
-      },
-      {
-        "image": "/images/visa2.png",
-        "image_alt": ""
-      },
-      {
-        "image": "/images/visa3.png",
-        "image_alt": ""
-      }
-    ],
     "text_bottom_footer": "All Rights Reserved |Copyright © 2024 Website Demo",
     "_inputs": {
       "background": {
@@ -186,11 +70,14 @@
       "contact[*].image": {
         "type": "image"
       },
-      "payment[*].image": {
-        "type": "image"
+      "contact[*].image_alt": {
+        "type": "text"
       },
       "description": {
         "type": "markdown"
+      },
+      "map": {
+        "type": "textarea"
       },
       "text_bottom_footer": {
         "type": "markdown"

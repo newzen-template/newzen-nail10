@@ -14,6 +14,7 @@ content_blocks:
     status: true
     background_color: '#11141d'
     title: Menu Services
+    sub_title: NAIL LAB
     style: true
 
   - _block_name: services/menu

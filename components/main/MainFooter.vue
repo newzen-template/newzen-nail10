@@ -101,15 +101,7 @@
           </div>
           <div class="col-lg-4">
             <div class="map-container">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3833.6492143608884!2d-78.6030766!3d35.9009568!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac5752d88602b3%3A0xf4b931a748e2dc2c!2sNAIL%20LAB%20-%20Luxury%20Nail%20Bar!5e1!3m2!1sen!2s!4v1741236418821!5m2!1sen!2s"
-                class="w-100"
-                height="300"
-                :style="{ border: 0 }"
-                :allowfullscreen="true"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
+              <div v-html="footerData.map"></div>
             </div>
           </div>
         </div>
@@ -120,16 +112,10 @@
 
     <!-- Copyright -->
     <div class="copyright py-3">
-      <div class="container text-center">
-        © 2024 NAIL LAB design by NailSoft • All Rights Reserved |
-        <NuxtLink itemprop="url" to="#" class="text-secondary"
-          >nail salon in 27615</NuxtLink
-        >
-        |
-        <NuxtLink itemprop="url" to="#" class="text-secondary"
-          >best nail salon in 27615</NuxtLink
-        >
-      </div>
+      <div
+        class="container text-center"
+        v-html="footerData.text_bottom_footer"
+      ></div>
     </div>
 
     <!-- Back to top button -->

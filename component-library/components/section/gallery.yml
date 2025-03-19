@@ -23,7 +23,7 @@ preview:
 _inputs:
   title:
     type: text
-    label: Content
+    label: Title
   button.label:
     type: text
     label: Label

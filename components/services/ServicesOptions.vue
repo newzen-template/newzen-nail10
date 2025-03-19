@@ -27,7 +27,10 @@
             <h2 class="text-white mb-3 section-title">
               {{ section.name }}
             </h2>
-            <p class="text-info mb-4 text-center text-secondary description">
+            <p
+              class="mb-4 text-center description"
+              style="color: var(--color-secondary-text)"
+            >
               {{ section?.description || '' }}
             </p>
 
@@ -47,7 +50,8 @@
           <!-- Note at bottom -->
           <p
             itemprop="description"
-            class="text-info fst-italic mt-4 text-center text-secondary note"
+            class="fst-italic mt-4 text-center note"
+            style="color: var(--color-secondary-text)"
           >
             {{ block.note }}
           </p>

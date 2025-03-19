@@ -35,11 +35,9 @@
               </div> -->
             </div>
           </div>
-          <div
-            v-if="block.is_show_image"
-            class="menu-description text-secondary"
-          >
+          <div v-if="block.is_show_image" class="menu-description">
             <div
+              style="color: var(--color-secondary-text)"
               class="menu-description-item ckeditor-custom"
               v-html="item?.description || ' '"
             ></div>
@@ -48,8 +46,11 @@
       </div>
       <div
         v-if="block.is_show_image"
-        class="text-secondary"
-        style="font-size: 16px; font-style: italic"
+        style="
+          font-size: 16px;
+          font-style: italic;
+          color: var(--color-secondary-text);
+        "
       >
         <p
           itemprop="description"
