@@ -50,32 +50,7 @@
 </template>
 
 <script lang="ts" setup>
-import header from '@/data/header.json';
-import LANGUAGES from '@/data/lang-setting.json';
-import { useRoute } from 'vue-router';
 import Button from '~/common/Button.vue';
-
-const route = useRoute();
-const langDefault: any = LANGUAGES.find((item) => {
-  return item.isDefault;
-});
-
-let headerData: any = ref(header.en);
-
-watch(
-  () => route.path,
-  () => {
-    for (const key of Object.keys(header)) {
-      if (route.path.includes(key)) {
-        headerData.value = (header as any)[key];
-        break;
-      } else {
-        headerData.value = (header as any)[langDefault.value];
-      }
-    }
-  },
-  { deep: true, immediate: true }
-);
 
 interface Props {
   dataBinding: any;
@@ -83,8 +58,6 @@ interface Props {
 }
 
 const { dataBinding, block } = defineProps<Props>();
-
-const currentText = getCurrentPageText();
 
 onMounted(() => {
   const observer = new IntersectionObserver(
@@ -109,11 +82,6 @@ onMounted(() => {
     observer.observe(element);
   });
 });
-
-function getCurrentPageText(): string {
-  const currentPagePath = route.path.replace(/^\//, '');
-  return currentPagePath;
-}
 </script>
 
 <style lang="scss" scoped>
