@@ -26,7 +26,7 @@
             :style="{ transitionDelay: index * 0.12 + 's' }"
             @click="openLightbox(index)"
           >
-            <NuxtImg
+            <img
               :src="item.image"
               :alt="item.image_alt"
               class="img-fluid w-100 h-150 object-fit-cover"
@@ -401,6 +401,12 @@ $desktop-sm: 991.98px;
     font-size: 28px !important;
     margin-bottom: 20px !important;
   }
+
+  .animation-element {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (max-width: $mobile-sm) {
@@ -418,6 +424,12 @@ $desktop-sm: 991.98px;
 
   .btn-mobile {
     font-size: 12px !important;
+  }
+
+  .animation-element {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
 </style>

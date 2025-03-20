@@ -5,7 +5,11 @@
     :style="{ backgroundColor: block.background_color }"
     class="about-section py-5"
   >
-    <div class="container" itemscope itemtype="http://schema.org/AboutPage">
+    <div
+      class="container position-relative"
+      itemscope
+      itemtype="http://schema.org/AboutPage"
+    >
       <div class="row h-100 align-items-center">
         <div class="col-lg-6 text-white mb-4 mb-lg-0">
           <h2 class="display-4 fw-bold mb-4 about-title" itemprop="name">
@@ -20,28 +24,28 @@
         <div class="col-lg-6">
           <div class="image-grid">
             <div>
-              <NuxtImg
+              <img
                 :src="block.image_1"
                 :alt="block.image_alt"
                 class="img-fluid rounded shadow-lg"
               />
             </div>
             <div>
-              <NuxtImg
+              <img
                 :src="block.image_2"
                 :alt="block.image_alt_2"
                 class="img-fluid rounded shadow-lg"
               />
             </div>
             <div>
-              <NuxtImg
+              <img
                 :src="block.image_3"
                 :alt="block.image_alt_3"
                 class="img-fluid rounded shadow-lg"
               />
             </div>
             <div>
-              <NuxtImg
+              <img
                 :src="block.image_4"
                 :alt="block.image_alt_4"
                 class="img-fluid rounded shadow-lg"
@@ -49,6 +53,14 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="decor-image">
+        <img
+          :src="block.decor_image"
+          alt="decor image"
+          class="img-fluid rounded shadow-lg"
+          style="width: 100%; height: 100%; filter: blur(50px)"
+        />
       </div>
     </div>
   </section>
@@ -249,6 +261,20 @@ defineProps<Props>();
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.decor-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.row {
+  position: relative;
+  z-index: 2;
 }
 
 // Remove fixed sizes for tablet and mobile

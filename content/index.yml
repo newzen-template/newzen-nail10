@@ -39,6 +39,7 @@ content_blocks:
     status: true
     background_color: '#11141d'
     title: About Us
+    decor_image: '/images/decor_pack.png'
     description: <p><a href="https://naillabnc.com" target="_blank" rel="noopener"><strong>Nail Lab nail salon&nbsp;in&nbsp;Raleigh, NC 27615</strong></a>&nbsp;is a premier destination for those seeking top-quality&nbsp;<b>nail services</b>&nbsp;in a chic and relaxing environment.&nbsp;<b>Nail Lab</b>&nbsp;offers an extensive range of services including&nbsp;<b>manicures</b>,&nbsp;<b>pedicures</b>, gel nails, acrylic nails, and nail art. With a team of highly skilled technicians who stay up-to-date with the latest trends and techniques in the industry, clients can expect personalized and unmatched service that exceeds their expectations. In addition to our excellent service,&nbsp;<b>Nail Lab</b>&nbsp;prioritizes cleanliness and hygiene by using only high-quality products and following strict sanitization procedures. Our salon boasts modern interiors adorned with sleek furnishings that create a sophisticated ambiance for clients to unwind and enjoy their pampering session. Whether one desires a classic French manicure or wants to experiment with bold nail designs,&nbsp;<b>Nail Lab</b>&nbsp;in&nbsp;<b>Raleigh, NC 27615&nbsp;</b>ensures every individual leaves feeling rejuvenated with stunningly beautiful nails.&nbsp;</p>
     image_1: /images/nail-lab-1-scaled.png
     image_alt_1: Nail 1

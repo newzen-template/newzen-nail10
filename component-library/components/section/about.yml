@@ -19,12 +19,16 @@ blueprint:
   image_alt_3: Nail 3
   image_4: /images/how-to-soothe-irritation-after-waxing-Hero-sdc-101422.png
   image_alt_4: Nail 4
+  decor_image: '/images/decor_pack.png'
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
+  decor_image:
+    type: image
+    label: Decor Image
   image_1:
     type: image
     label: Image 1
