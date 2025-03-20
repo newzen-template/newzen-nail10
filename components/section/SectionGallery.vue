@@ -4,7 +4,6 @@
     :style="{ background: block.background_color }"
     :data-cms-bind="dataBinding"
     class="our-work"
-    style="min-height: 672px; width: 100%"
   >
     <div class="container">
       <h2
@@ -242,6 +241,8 @@ $desktop-sm: 991.98px;
 // Base styles
 .our-work {
   @include flex-center;
+  width: 100%;
+  padding: 80px 0;
 }
 
 .animation-element {

@@ -21,11 +21,10 @@
           >
             <div class="d-flex align-items-center gap-2 mb-2">
               <h6
-                class="text-uppercase text-white fw-medium tracking-wide mb-0"
+                class="text-uppercase text-white fw-medium tracking-wide mb-0 ckeditor-custom"
                 style="font-size: 14px"
-              >
-                TESTIMONIAL
-              </h6>
+                v-html="block.title"
+              ></h6>
             </div>
             <h2
               style="
@@ -35,7 +34,7 @@
               "
               class="section-title text-white fw-semibold pb-2"
             >
-              <div v-html="block.title" class="ckeditor-custom"></div>
+              <div v-html="block.sub_title" class="ckeditor-custom"></div>
             </h2>
             <swiper
               :modules="[SwiperAutoplay, SwiperPagination]"

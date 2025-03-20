@@ -12,6 +12,8 @@ blueprint:
   background_color: '#11141d'
   logo: '/images/logo.png'
   logo_alt: NAIL LAB
+  title: Contact Us
+  sub_title: Feel free to reach out
   button:
     is_show: true
     label: 'Contact us'
@@ -23,6 +25,12 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
+  title:
+    type: markdown
+    label: Title
+  sub_title:
+    type: markdown
+    label: Subtitle
   logo:
     type: image
     label: Logo

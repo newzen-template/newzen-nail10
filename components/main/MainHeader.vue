@@ -8,11 +8,7 @@
       <nav
         class="navbar d-flex h-100 justify-content-between align-items-center flex-nowrap"
       >
-        <NuxtLink
-          itemprop="url"
-          to="https://naillabnc.com"
-          class="navbar-brand"
-        >
+        <NuxtLink itemprop="url" to="/" class="navbar-brand">
           <img
             itemprop="logo"
             src="/images/logo.png"

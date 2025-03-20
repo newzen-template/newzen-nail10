@@ -3,28 +3,6 @@
     "logo": "/images/logo.png",
     "logo_alt": "Logo alt",
     "background_color": "#11141d",
-    "header_top": {
-      "background_color": "#183029",
-      "phone": {
-        "image": "/images/icon_phone.png",
-        "image_alt": "",
-        "label": "(+84) 909 878 182"
-      },
-      "social": [
-        {
-          "image": "/images/icon_fb.png",
-          "image_alt": "FaceBook",
-          "link": "/#",
-          "open_new_tab": true
-        },
-        {
-          "image": "/images/icon_yt.png",
-          "image_alt": "FaceBook",
-          "link": "/#",
-          "open_new_tab": true
-        }
-      ]
-    },
     "items": [
       {
         "link": "/",
@@ -71,21 +49,8 @@
       "logo": {
         "type": "image"
       },
-      "search": {
-        "type": "text",
-        "label": "Placeholder"
-      },
       "background_color": {
         "type": "color"
-      },
-      "header_top.background_color": {
-        "type": "color"
-      },
-      "header_top.phone.image": {
-        "type": "image"
-      },
-      "header_top.social[*].image": {
-        "type": "image"
       }
     }
   }

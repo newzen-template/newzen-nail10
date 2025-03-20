@@ -18,8 +18,8 @@ content_blocks:
 
   - _block_name: contact/hero
     status: true
-    title: Get in touch and let us know how we can help.
-    sub_title: NAIL LAB
+    title: NAIL LAB
+    sub_title: Get in touch and let us know how we can help.
     background_color: '#11141d'
     map: '<iframe
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30669.193637388995!2d-78.603077!3d35.900957!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac5752d88602b3%3A0xf4b931a748e2dc2c!2sNAIL%20LAB%20-%20Luxury%20Nail%20Bar!5e1!3m2!1sen!2sus!4v1741341715935!5m2!1sen!2sus"

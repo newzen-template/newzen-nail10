@@ -53,7 +53,7 @@ content_blocks:
     status: true
     title: Our Services
     background_color: '#11141d'
-    background_items: 'red'
+    background_items: '#11141d'
     name_logo: NAIL LAB
     button:
       is_show: true

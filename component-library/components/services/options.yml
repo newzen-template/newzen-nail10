@@ -31,7 +31,7 @@ _inputs:
     type: text
     label: Image Alt
   note:
-    type: textarea
+    type: markdown
     label: Note
   list_items[*].name:
     type: text
@@ -43,7 +43,7 @@ _inputs:
     type: text
     label: Title
   list_items[*].menu[*].price:
-    type: number
+    type: text
     label: Price
   # list_items[*].menu[*].price_currency:
   #   type: select

@@ -14,6 +14,7 @@ blueprint:
   background_color: '#11141d'
   image: '/images/menu1.png'
   image_alt: menu 1
+  is_show_image: true
   description: '<div class="elementor-widget-container"><p><i><span style="font-weight: 400;">Pink Himalayan Salt, rich in nutrients and minerals, aids in various skin conditions such as acne treatment, psoriasis, and eczema. It also provides pain relief, decreases stress, enhances blood circulation, promotes detoxification, aids in sleep, exfoliates the skin, removes splinters, relaxes tired muscles, softens skin, assists in weight loss by expelling excess water from cells, detoxifies the skin, and promotes skin brightening.</span></i></p><p><i><span style="font-weight: 400;">The detox scrub helps diminish swelling, soothe the body, and harmonize your energy.</span></i></p>								</div>'
   menu:
     - name: Classic Pedicure
@@ -34,6 +35,9 @@ _inputs:
   title:
     type: text
     label: Content
+  is_show_image:
+    type: toggle
+    label: Show Image
   image:
     type: image
     label: Image 1
@@ -43,11 +47,14 @@ _inputs:
   background_color:
     type: color
     label: Background Color
+  description:
+    type: markdown
+    label: Description
   menu[*].name:
     type: text
     label: Name
   menu[*].price:
-    type: number
+    type: text
     label: Price
   menu[*].description:
     type: markdown

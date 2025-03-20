@@ -24,7 +24,7 @@
                   class="social-link"
                 >
                   <img
-                    :src="item?.icon_name"
+                    :src="item.image"
                     alt="icon"
                     style="height: 20px; width: 20px"
                   />
@@ -60,8 +60,7 @@
                     >
                       <img
                         style="height: 20px; width: 20px"
-                        v-if="item?.icon_name"
-                        :src="item?.icon_name"
+                        :src="item.image"
                         alt="icon"
                       />
                       <span
@@ -100,7 +99,10 @@
             </div>
           </div>
           <div class="col-lg-4">
-            <div class="map-container">
+            <div
+              class="map-container"
+              :style="{ backgroundColor: footerData.background_copyright }"
+            >
               <div v-html="footerData.map"></div>
             </div>
           </div>
@@ -108,24 +110,18 @@
 
         <!-- Map Container -->
       </div>
+      <div class="decor-footer">
+        <NuxtImg
+          :src="footerData?.decor_footer || ' '"
+          :alt="footerData?.decor_footer || ' '"
+        />
+      </div>
     </div>
 
     <!-- Copyright -->
-    <div class="copyright py-3">
-      <div
-        class="container text-center"
-        v-html="footerData.text_bottom_footer"
-      ></div>
+    <div class="container">
+      <div class="copyright" v-html="footerData.text_bottom_footer"></div>
     </div>
-
-    <!-- Back to top button -->
-    <!-- <button
-      v-show="isShowButtonToTop"
-      @click="scrollToTop"
-      class="btn-scroll-top"
-    >
-      <i class="fas fa-arrow-up"></i>
-    </button> -->
   </footer>
 </template>
 
@@ -221,23 +217,26 @@ footer {
     @include breakpoints.mobile-down {
       padding: 30px 0;
     }
+
+    .decor-footer {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   .col-lg-4 {
     .map-container {
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      height: 100%;
 
       @include breakpoints.desktop-down {
         height: 280px;
       }
 
-      @include breakpoints.tablet-down {
-        height: 250px;
-      }
-
       @include breakpoints.mobile-down {
         width: 100%;
-        height: 220px;
       }
     }
 
@@ -386,7 +385,9 @@ footer {
   .copyright {
     background: rgba(0, 0, 0, 0.3);
     font-size: 0.9rem;
-    padding: 15px 0;
+    padding: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 
     a {
       text-decoration: none;

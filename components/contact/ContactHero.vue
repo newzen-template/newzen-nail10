@@ -9,11 +9,12 @@
       <div class="row">
         <!-- Left Column -->
         <div class="col-md-5 d-flex flex-column justify-content-center">
-          <h6 style="font-size: 14px" class="text-main mb-3">NAIL LAB</h6>
-          <h2 class="title mb-3">
-            {{ block.title }}
-          </h2>
-
+          <h6
+            style="font-size: 14px"
+            class="text-main mb-3 ckeditor-custom"
+            v-html="block.title"
+          ></h6>
+          <h2 class="title mb-3 ckeditor-custom" v-html="block.sub_title"></h2>
           <!-- Map Info -->
           <div
             class="contact-item d-flex align-items-start mb-4"

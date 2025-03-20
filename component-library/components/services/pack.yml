@@ -9,6 +9,7 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   status: true
+  decor_image: '/images/decor_pack.png'
   menu:
     - name: DIPPING POWDER
       image: '/images/menu3.png'
@@ -21,6 +22,9 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
+  decor_image:
+    type: image
+    label: Decor Image
   menu[*].name:
     type: text
     label: Content
@@ -34,7 +38,7 @@ _inputs:
     type: text
     label: Content
   menu[*].list_items[*].price:
-    type: number
+    type: text
     label: Price
   menu[*].list_items[*].description:
     type: markdown

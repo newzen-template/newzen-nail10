@@ -3,7 +3,7 @@
     v-if="block.status"
     :style="{ background: block.background_color }"
     :data-cms-bind="dataBinding"
-    style="padding: 40px 0"
+    style="padding: 80px 0"
   >
     <div
       class="container-md text-white d-flex flex-column gap-4 align-items-center"

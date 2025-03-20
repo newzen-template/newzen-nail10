@@ -1,10 +1,14 @@
 <template>
   <section
     v-if="block.status"
-    :style="{ background: block?.background_color }"
+    :style="{ background: block?.background_color, padding: '80px 0' }"
     :data-cms-bind="dataBinding"
   >
-    <div class="container" itemscope itemtype="http://schema.org/Service">
+    <div
+      class="container position-relative"
+      itemscope
+      itemtype="http://schema.org/Service"
+    >
       <meta itemprop="serviceType" :content="businessType" />
       <div v-if="block.is_show_image">
         <NuxtImg
@@ -26,8 +30,8 @@
           class="menu-item animation-item"
         >
           <div class="d-flex justify-content-between align-items-start mb-2">
-            <h3 class="menu-title text-white mb-0">{{ item.name }}</h3>
-            <span class="flex-grow-1 border-dotted"></span>
+            <h3 class="menu-title text-white mb-0">{{ item.title }}</h3>
+            <span class="border-dotted"></span>
             <div class="menu-title text-end">
               <div class="price text-white">${{ item.price }}</div>
               <!-- <div v-if="item.gel_polish_price" class="gel-polish text-white">
@@ -35,11 +39,11 @@
               </div> -->
             </div>
           </div>
-          <div v-if="block.is_show_image" class="menu-description">
+          <div class="menu-description">
             <div
               style="color: var(--color-secondary-text)"
               class="menu-description-item ckeditor-custom"
-              v-html="item?.description || ' '"
+              v-html="item.description"
             ></div>
           </div>
         </div>
@@ -47,17 +51,21 @@
       <div
         v-if="block.is_show_image"
         style="
-          font-size: 16px;
+          font-size: 14px;
           font-style: italic;
           color: var(--color-secondary-text);
         "
-      >
-        <p
-          itemprop="description"
-          class="mb-1 description-menu ckeditor-custom"
-          v-html="block?.description || ' '"
-        ></p>
-      </div>
+        itemprop="description"
+        class="mb-1 description-menu ckeditor-custom animation-item"
+        v-html="block.description"
+      ></div>
+      <!-- <div class="decor-image" v-if="block?.decor_image">
+        <NuxtImg
+          style="width: 100%; height: 100%; filter: blur(50px)"
+          :src="block?.decor_image || ' '"
+          :alt="block?.decor_image || ' '"
+        />
+      </div> -->
     </div>
   </section>
 </template>
@@ -139,6 +147,7 @@ onMounted(() => {
 .menu-container {
   column-count: 2;
   column-gap: 2rem;
+  padding: 0 0.5rem;
 
   @include breakpoints.tablet-down {
     column-count: 1;
@@ -168,10 +177,8 @@ onMounted(() => {
 
 .border-dotted {
   margin: 0 10px;
-  border-bottom: 1px dotted white;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  flex: 1;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
   align-self: center;
 }
 
@@ -218,11 +225,19 @@ onMounted(() => {
 
 .description-menu {
   font-size: 14px;
+  padding: 0 0.5rem;
   color: var(--color-secondary-text);
 
   @include breakpoints.mobile {
     font-size: 12px;
   }
+}
+
+.decor-image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .animation-item {

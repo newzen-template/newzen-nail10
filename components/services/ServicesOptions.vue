@@ -1,9 +1,9 @@
 <template>
   <section
     v-if="block.status"
-    :style="{ background: block.background_color }"
+    :style="{ background: block.background_color, padding: '80px 0' }"
     :data-cms-bind="dataBinding"
-    class="py-4 menu-section"
+    class="menu-section"
   >
     <div class="container-md" itemscope itemtype="http://schema.org/Service">
       <div class="row g-4">
@@ -18,14 +18,14 @@
         </div>
 
         <!-- Right side - Content -->
-        <div class="col-lg-6">
+        <div class="col-lg-6 px-2">
           <div
             v-for="(section, sectionIndex) in block.list_items"
             :key="sectionIndex"
             class="menu-section"
           >
             <h2 class="text-white mb-3 section-title">
-              {{ section.name }}
+              {{ section.title }}
             </h2>
             <p
               class="mb-4 text-center description"
@@ -40,10 +40,8 @@
               class="menu-item d-flex justify-content-between align-items-center mb-3"
             >
               <div class="text-white service-title">{{ item.title }}</div>
-              <div class="d-flex align-items-center flex-grow-1">
-                <div class="dotted-line border-bottom border-white mx-3"></div>
-                <div class="text-white price">{{ item.price }}</div>
-              </div>
+              <span class="dotted-line"></span>
+              <div class="text-white price">{{ item.price }}</div>
             </div>
           </div>
 
@@ -160,8 +158,10 @@ defineProps<Props>();
   }
 
   .dotted-line {
+    margin: 0 10px;
     flex: 1;
     border-bottom: 1px dotted #94a3b8;
+    align-self: center;
   }
 }
 

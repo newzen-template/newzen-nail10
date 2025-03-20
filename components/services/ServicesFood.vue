@@ -26,7 +26,7 @@
         >
           <div class="menu-card">
             <div class="menu-header">
-              <h3>{{ item.name }}</h3>
+              <h3>{{ item.title }}</h3>
             </div>
             <div
               class="menu-content ckeditor-custom"
@@ -138,7 +138,7 @@ defineProps<Props>();
 }
 
 .menu-content {
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   flex: 1;
   display: flex;
   flex-direction: column;
