@@ -8,7 +8,7 @@
     <div class="container-md" itemscope itemtype="http://schema.org/Service">
       <div class="row g-4">
         <!-- Left side - Image -->
-        <div class="col-lg-6 text-center">
+        <div class="col-lg-6 text-center" v-if="block.image">
           <img
             itemprop="image"
             :src="block.image"

@@ -12,6 +12,7 @@
       <meta itemprop="serviceType" :content="businessType" />
       <div v-if="block.is_show_image">
         <NuxtImg
+          v-if="block.image"
           itemprop="image"
           class="image-menu"
           :src="block?.image || ' '"

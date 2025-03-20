@@ -62,16 +62,20 @@
                     {{ testimonial.description }}
                   </p>
                   <div class="d-flex align-items-center gap-3">
-                    <div class="author-avatar rounded-circle overflow-hidden">
+                    <div
+                      class="author-avatar rounded-circle overflow-hidden"
+                      v-if="testimonial.avatar"
+                    >
                       <NuxtImg
                         :src="testimonial.avatar"
                         :alt="testimonial.title"
                         class="w-100 h-100 object-fit-cover"
                       />
                     </div>
-                    <div class="author-name text-white">
-                      {{ testimonial.title }}
-                    </div>
+                    <div
+                      class="author-name text-white ckeditor-custom"
+                      v-html="testimonial.title"
+                    ></div>
                   </div>
                 </div>
               </swiper-slide>

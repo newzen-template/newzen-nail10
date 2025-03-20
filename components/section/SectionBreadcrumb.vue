@@ -20,7 +20,7 @@
       class="breadcrumb-section rounded-bottom-5 position-relative d-flex align-items-center justify-content-center flex-column"
     >
       <h6
-        v-if="block.style"
+        v-if="block.style && block.sub_title"
         class="nail-lab-badge border-primary text-white rounded-pill text-center fw-normal slide-up-animation-h6"
       >
         {{ block.sub_title || '' }}

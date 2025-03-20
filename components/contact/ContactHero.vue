@@ -21,9 +21,9 @@
             v-for="item in block.menu_items"
             :key="item.label"
           >
-            <NuxtLink to="/" class="contact-content"
-              >{{ item.label }}
+            <NuxtLink to="/" class="contact-content">
               <img
+                v-if="item.image"
                 width="20"
                 height="20"
                 :src="item.image"

@@ -23,28 +23,28 @@
         </div>
         <div class="col-lg-6">
           <div class="image-grid">
-            <div>
+            <div v-if="block.image_1">
               <img
                 :src="block.image_1"
                 :alt="block.image_alt"
                 class="img-fluid rounded shadow-lg"
               />
             </div>
-            <div>
+            <div v-if="block.image_2">
               <img
                 :src="block.image_2"
                 :alt="block.image_alt_2"
                 class="img-fluid rounded shadow-lg"
               />
             </div>
-            <div>
+            <div v-if="block.image_3">
               <img
                 :src="block.image_3"
                 :alt="block.image_alt_3"
                 class="img-fluid rounded shadow-lg"
               />
             </div>
-            <div>
+            <div v-if="block.image_4">
               <img
                 :src="block.image_4"
                 :alt="block.image_alt_4"
