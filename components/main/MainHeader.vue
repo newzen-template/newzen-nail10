@@ -11,14 +11,14 @@
         <NuxtLink itemprop="url" to="/" class="navbar-brand">
           <img
             itemprop="logo"
-            src="/images/logo.png"
-            alt="NailLab NC"
+            :src="headerData.logo"
+            :alt="headerData.logo_alt"
             class="logo"
           />
         </NuxtLink>
 
         <!-- Desktop Menu -->
-        <div class="menu-desktop d-none d-lg-block w-100">
+      <div class="menu-desktop d-none d-lg-block w-100">
           <ul class="d-flex list-unstyled m-0">
             <li
               v-for="(header, index) of headerData.items"
