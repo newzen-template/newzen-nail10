@@ -1,15 +1,14 @@
 <template>
   <section
+    v-if="block.status"
     class="testimonial-section position-relative"
-    :style="{
-      background: `linear-gradient(
-        120deg,
-        rgba(26, 30, 37, 0.65),
-        rgba(26, 30, 37, 0.15)
-      ),
-      url(${block.background_image}) center/cover no-repeat`,
-      padding: '120px 0',
-    }"
+    :data-cms-bind="dataBinding"
+    :style="[
+      {
+        padding: '120px 0',
+      },
+      backgroundComputed,
+    ]"
   >
     <div class="container">
       <div class="row">
@@ -18,6 +17,9 @@
             class="testimonial-card position-relative water-drop-animation"
             ref="testimonialCard"
             :class="{ 'animate-in': isVisible }"
+            :style="{
+              background: `linear-gradient(135deg,rgba(0, 0, 0, 0.4) 0%,${block.background_card} 100%)`,
+            }"
           >
             <div class="d-flex align-items-center gap-2 mb-2">
               <h6
@@ -63,12 +65,12 @@
                     <div class="author-avatar rounded-circle overflow-hidden">
                       <NuxtImg
                         :src="testimonial.avatar"
-                        :alt="testimonial.author"
+                        :alt="testimonial.title"
                         class="w-100 h-100 object-fit-cover"
                       />
                     </div>
                     <div class="author-name text-white">
-                      {{ testimonial.author }}
+                      {{ testimonial.title }}
                     </div>
                   </div>
                 </div>
@@ -92,9 +94,25 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { ref, onMounted } from 'vue';
+interface Props {
+  dataBinding: any;
+  block: any;
+}
+const { block, dataBinding } = defineProps<Props>();
 
 const testimonialCard = ref(null);
 const isVisible = ref(false);
+
+const backgroundComputed = computed(() => {
+  return block.background_image
+    ? {
+        background: `linear-gradient(120deg,rgba(26, 30, 37, 0.65),rgba(26, 30, 37, 0.15)), url(${block.background_image}) center/cover no-repeat`,
+      }
+    : {
+        background: block.background_color,
+      };
+});
+console.log('backgroundComputed:', backgroundComputed);
 
 onMounted(() => {
   const observer = new IntersectionObserver(
@@ -114,13 +132,6 @@ onMounted(() => {
   if (testimonialCard.value) {
     observer.observe(testimonialCard.value);
   }
-});
-
-defineProps({
-  block: {
-    type: Object,
-    required: true,
-  },
 });
 </script>
 
@@ -175,12 +186,6 @@ defineProps({
 }
 
 .testimonial-card {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.4) 0%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(255, 255, 255, 0.4) 100%
-  );
   border-radius: 16px;
   padding: 64px 48px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);

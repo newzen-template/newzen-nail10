@@ -34,9 +34,6 @@
             <span class="border-dotted"></span>
             <div class="menu-title text-end">
               <div class="price text-white">${{ item.price }}</div>
-              <!-- <div v-if="item.gel_polish_price" class="gel-polish text-white">
-                Gel Polish ${{ item.gel_polish_price }}
-              </div> -->
             </div>
           </div>
           <div class="menu-description">
@@ -59,13 +56,6 @@
         class="mb-1 description-menu ckeditor-custom animation-item"
         v-html="block.description"
       ></div>
-      <!-- <div class="decor-image" v-if="block?.decor_image">
-        <NuxtImg
-          style="width: 100%; height: 100%; filter: blur(50px)"
-          :src="block?.decor_image || ' '"
-          :alt="block?.decor_image || ' '"
-        />
-      </div> -->
     </div>
   </section>
 </template>

@@ -25,7 +25,6 @@ content_blocks:
     image_alt: menu 1
     is_show_image: true
     description: '<div class="elementor-widget-container"><p><i><span style="font-weight: 400;">Pink Himalayan Salt, rich in nutrients and minerals, aids in various skin conditions such as acne treatment, psoriasis, and eczema. It also provides pain relief, decreases stress, enhances blood circulation, promotes detoxification, aids in sleep, exfoliates the skin, removes splinters, relaxes tired muscles, softens skin, assists in weight loss by expelling excess water from cells, detoxifies the skin, and promotes skin brightening.</span></i></p><p><i><span style="font-weight: 400;">The detox scrub helps diminish swelling, soothe the body, and harmonize your energy.</span></i></p>								</div>'
-    decor_image: '/images/decor_menu.png'
     menu:
       - title: Classic Pedicure
         price: 38
@@ -155,8 +154,11 @@ content_blocks:
   - _block_name: services/menu
     status: true
     background_color: '#11141d'
+    image: ' '
+    image_alt: menu 1
     title: WAXING
     is_show_image: false
+    description: ' '
     menu:
       - title: Eyebrows
         price: 15

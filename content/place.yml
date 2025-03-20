@@ -34,7 +34,7 @@ content_blocks:
             image_alt: Place 5
           - image: /images/place-6.png
             image_alt: Place 6
-      - label: HAHAHA
+      - label: Nail List
         item:
           - image: /images/place-1.png
             image_alt: Place 1

@@ -92,15 +92,16 @@ content_blocks:
     status: true
     background_image: '/images/background_section_comment.png'
     background_color: '#11141d'
+    background_card: '#11141d'
     title: TESTIMONIAL
     sub_title: What customers say about us?
     list_items:
-      - author: Sarah
+      - title: Sarah
         avatar: '/images/background_section_comment.png'
         description: 'The service was amazing! The staff was very professional and my nails look beautiful.'
-      - author: Jessica
+      - title: Jessica
         avatar: '/images/background_section_comment.png'
         description: "I can't believe I got my nails done at Nail Lab! They were so friendly and professional."
-      - author: Laura
+      - title: Laura
         avatar: '/images/background_section_comment.png'
         description: 'I absolutely loved the design and the attention to detail in my nails. The staff was also great.'
