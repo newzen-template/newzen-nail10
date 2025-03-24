@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Contact Plugin",
+    "plugin_identity": "com.newzen.contact-plugin",
+    "description": "Fix: fix value tenant_id",
+    "status": 1,
+    "path_component": "plugin/contact-plugin/./index.vue",
+    "version": "1.0.40",
+    "path_component_library_block": "plugin/contact-plugin/./index.yml"
+  }
+]

@@ -1,0 +1,139 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Contact plugin
+  description: Contact plugin
+  icon: 'i-mdi-contact-mail'
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  status: true
+  title: Contact
+  sub_title:
+  background_color: '#ffffff'
+  background_image:
+  color_text: '#666666'
+  form_width: 1/2
+  border: 0
+  form:
+    - fields: text
+      status_error: true
+      error: Please this is a required field.
+      label: First Name
+      placehoder: Please enter first name
+      width_fields: 1/2
+    - fields: text
+      status_error: true
+      error: Please this is a required field.
+      label: Last Name
+      placehoder: Please enter last name
+      width_fields: 1/2
+    - fields: email
+      status_error: true
+      error: Please this is a required field.
+      label: Email
+      placehoder: Please enter email
+      width_fields: full
+    - fields: tel
+      status_error: true
+      error: Please this is a required field.
+      label: Phone Number
+      placehoder: Please enter phone number
+      width_fields: full
+    - fields: textarea
+      status_error: true
+      error: Please this is a required field.
+      label: Message
+      placehoder: Please enter message
+      width_fields: full
+    - fields: file
+      status_error: true
+      error: Please this is a required field.
+      label: Attachments 2 (for Resume, References, etc)
+      placehoder: PNG, JPG or PDF, smaller than 15MB dasds
+      width_fields: full
+  button:
+    background: '#000000'
+    color: '#ffffff'
+    border: 25
+    text_button: submit
+    variant: solid
+    width_button: auto
+    align_button: left
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  status:
+    label: Active section
+    type: toggle
+  title:
+    label: Title
+    type: markdown_simple
+  sub_title:
+    label: Sub Title
+    type: markdown_simple
+  background_color:
+    label: Background Color
+    type: color
+  background_image:
+    label: Background Image
+    type: image
+  color_text:
+    label: Color Text
+    type: color
+  border:
+    label: Border Radius Fields
+    type: text
+  form_width:
+    label: Width Form
+    type: select
+    options:
+      - full
+      - 1/2
+  form:
+    label: Form Contact
+    description: Add new form fields.
+  form[*].list_fields[*].fields:
+    label: Type Fields
+    type: select
+    description:
+    options:
+      - text
+      - textarea
+      - email
+      - tel
+      - file
+  form[*].list_fields[*].error:
+    label: Text Required
+    type: text
+  form[*].list_fields[*].status_error:
+    label: Required
+    type: toggle
+  form[*].list_fields[*].label:
+    label: Label
+    type: text
+  form[*].list_fields[*].placehoder:
+    label: Placehoder
+    type: text
+  form[*].list_fields[*].width_fields:
+    label: Width Fields
+    type: select
+    options:
+      - full
+      - 1/2
+  button.text_button:
+    label: Button Text
+    type: text
+  button.width_button:
+    label: Width Button
+    type: select
+    options:
+      - auto
+      - 1/2
+      - 1/3
+      - 1/4
+      - full

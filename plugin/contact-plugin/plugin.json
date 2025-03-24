@@ -1,0 +1,10 @@
+{
+  "name": "Contact Plugin",
+  "version": "1.0.40",
+  "plugin_identity": "com.newzen.contact-plugin",
+  "description": "Contact plugin is a plugin that helps users send information and contact administrators through filling out forms",
+  "author": "baonv",
+  "path_component_library_block": "./index.yml",
+  "path_component": "./index.vue",
+  "thumbnail": "thumbnail.png"
+}

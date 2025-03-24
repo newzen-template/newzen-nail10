@@ -11,14 +11,6 @@ blueprint:
   status: true
   title: Get in touch and let us know how we can help.
   background_color: '#11141d'
-  map: '<iframe
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30669.193637388995!2d-78.603077!3d35.900957!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac5752d88602b3%3A0xf4b931a748e2dc2c!2sNAIL%20LAB%20-%20Luxury%20Nail%20Bar!5e1!3m2!1sen!2sus!4v1741341715935!5m2!1sen!2sus"
-    width="100%"
-    height="485"
-    style="border: 0"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>'
   menu_items:
     - image: '/images/location-pointer-2961.svg'
       content: (919) 336-9999
@@ -50,6 +42,80 @@ _inputs:
   phone:
     type: text
     label: Phone Number
-  map:
-    type: textarea
-    label: Google Map
+  form_width:
+    label: Width Form
+    type: select
+    options:
+      - full
+      - 1/2
+  form:
+    label: Form Contact
+    description: Add new form fields.
+  form[*].background_color:
+    label: Form Background Color
+    type: color
+    description:
+    options:
+      - contact
+  form[*].fields:
+    label: Type Fields
+    type: select
+    description:
+    options:
+      - text
+      - textarea
+      - email
+      - tel
+      - file
+  form[*].error:
+    label: Text Required
+    type: text
+  form[*].status_error:
+    label: Required
+    type: toggle
+  form[*].label:
+    label: Label
+    type: text
+  form[*].placehoder:
+    label: Placehoder
+    type: text
+  form[*].width_fields:
+    label: Width Fields
+    type: select
+    options:
+      - full
+      - 1/2
+  button.text_button:
+    label: Button Text
+    type: text
+  button.background:
+    label: Background Color
+    type: color
+  button.color:
+    label: Text Color
+    type: color
+  button.border:
+    label: Border Radius
+    type: text
+  button.variant:
+    label: Variant Button
+    type: select
+    options:
+      - solid
+      - outline
+  button.width_button:
+    label: Width Button
+    type: select
+    options:
+      - auto
+      - 1/2
+      - 1/3
+      - 1/4
+      - full
+  button.align_button:
+    label: Align Button
+    type: select
+    options:
+      - left
+      - right
+      - center
