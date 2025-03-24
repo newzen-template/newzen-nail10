@@ -57,7 +57,7 @@ _inputs:
     description:
     options:
       - contact
-  form[*].fields:
+  form[*].list_fields[*].fields:
     label: Type Fields
     type: select
     description:
@@ -67,19 +67,19 @@ _inputs:
       - email
       - tel
       - file
-  form[*].error:
+  form[*].list_fields[*].error:
     label: Text Required
     type: text
-  form[*].status_error:
+  form[*].list_fields[*].status_error:
     label: Required
     type: toggle
-  form[*].label:
+  form[*].list_fields[*].label:
     label: Label
     type: text
-  form[*].placehoder:
+  form[*].list_fields[*].placehoder:
     label: Placehoder
     type: text
-  form[*].width_fields:
+  form[*].list_fields[*].width_fields:
     label: Width Fields
     type: select
     options:
@@ -88,21 +88,6 @@ _inputs:
   button.text_button:
     label: Button Text
     type: text
-  button.background:
-    label: Background Color
-    type: color
-  button.color:
-    label: Text Color
-    type: color
-  button.border:
-    label: Border Radius
-    type: text
-  button.variant:
-    label: Variant Button
-    type: select
-    options:
-      - solid
-      - outline
   button.width_button:
     label: Width Button
     type: select
@@ -112,10 +97,3 @@ _inputs:
       - 1/3
       - 1/4
       - full
-  button.align_button:
-    label: Align Button
-    type: select
-    options:
-      - left
-      - right
-      - center
