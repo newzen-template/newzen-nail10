@@ -215,16 +215,19 @@
                     }}<span
                       class="text-danger ms-1 fw-light fs-6"
                       v-if="item.status_error"
-                    ></span>
+                      >*</span
+                    >
                   </label>
                   <div
                     @dragover.prevent
                     @drop.prevent="handleDropFiles($event, key)"
                     :class="{
                       'border-danger':
-                        (item.status_error &&
-                          fieldError[key] &&
-                          !formState[key].value) === true,
+                        item.status_error === true &&
+                        fieldError[key] === true &&
+                        (!formState[key]?.value ||
+                          (Array.isArray(formState[key]?.value) &&
+                            formState[key]?.value.length === 0)),
                     }"
                     class="p-3 bg-light rounded border border-secondary border-dashed d-grid gap-2"
                   >
@@ -256,7 +259,9 @@
                     v-if="
                       item.status_error &&
                       fieldError[key] &&
-                      !formState[key].value
+                      (!formState[key]?.value ||
+                        (Array.isArray(formState[key]?.value) &&
+                          formState[key]?.value.length === 0))
                     "
                     class="form-text text-danger fw-medium"
                   >
@@ -515,6 +520,8 @@ if (dataJson?.length > 0) {
     return item.plugin_identity === 'com.newzen.contact-plugin';
   })?.data.tenant_id;
 }
+
+console.log(tenant_id.value);
 
 // Base URL for API calls
 const BASE_URL = 'https://contact-form-api.nz-service01.dtsmart.dev';
@@ -786,9 +793,16 @@ const validateForm = () => {
       const formField = props.block.list_fields?.[Number(key)];
 
       if (formField?.status_error) {
-        // Skip validation for file fields
         if (item.type === 'file') {
-          fieldError[key] = false;
+          // Handle file validation
+          if (
+            !item.value ||
+            (Array.isArray(item.value) && item.value.length === 0)
+          ) {
+            fieldError[key] = true;
+          } else {
+            fieldError[key] = false;
+          }
           continue;
         }
 

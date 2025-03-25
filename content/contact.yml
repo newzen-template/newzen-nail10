@@ -61,9 +61,9 @@ content_blocks:
         label: Message
         placehoder: Please enter message
         width_fields: full
-      # - fields: file
-      #   status_error: true
-      #   error: Please this is a required field.
-      #   label: Attachments 2 (for Resume, References, etc)
-      #   placehoder: PNG, JPG or PDF, smaller than 15MB dasds
-      #   width_fields: full
+      - fields: file
+        status_error: true
+        error: Please this is a required field.
+        label: Attachments 2 (for Resume, References, etc)
+        placehoder: PNG, JPG or PDF, smaller than 15MB dasds
+        width_fields: full
