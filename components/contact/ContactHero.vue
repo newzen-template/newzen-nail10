@@ -21,7 +21,6 @@
             v-html="block.title"
           ></h6>
           <h2 class="title mb-3 ckeditor-custom" v-html="block.sub_title"></h2>
-          <!-- Map Info -->
           <div
             class="contact-item d-flex align-items-start mb-4"
             v-for="item in block.menu_items"
