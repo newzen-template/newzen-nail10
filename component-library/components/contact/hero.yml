@@ -9,55 +9,55 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   status: true
-  title: Get in touch and let us know how we can help.
+  title: NAIL LAB
+  sub_title: Get in touch and let us know how we can help.
   background_color: '#11141d'
   menu_items:
     - image: '/images/location-pointer-2961.svg'
       content: (919) 336-9999
       link: '/'
-  form:
-    title: Send us a message
-    background_color: '#fff'
-    color: '#000'
-    background_color_btn: '#000'
-    color_btn: '#fff'
-    list_fields:
-      - fields: text
-        status_error: true
-        error: Please this is a required field.
-        label: First Name
-        placehoder: Please enter first name
-        width_fields: 1/2
-      - fields: text
-        status_error: true
-        error: Please this is a required field.
-        label: Last Name
-        placehoder: Please enter last name
-        width_fields: 1/2
-      - fields: email
-        status_error: true
-        error: Please this is a required field.
-        label: Email
-        placehoder: Please enter email
-        width_fields: full
-      - fields: tel
-        status_error: true
-        error: Please this is a required field.
-        label: Phone Number
-        placehoder: Please enter phone number
-        width_fields: full
-      - fields: textarea
-        status_error: true
-        error: Please this is a required field.
-        label: Message
-        placehoder: Please enter message
-        width_fields: full
-      - fields: file
-        status_error: true
-        error: Please this is a required field.
-        label: Attachments 2 (for Resume, References, etc)
-        placehoder: PNG, JPG or PDF, smaller than 15MB dasds
-        width_fields: full
+  title_form: Send us a message
+  background_color_form: '#ffffff'
+  color_form: '#000000'
+  background_color_btn: '#000000'
+  color_btn: '#ffffff'
+  list_fields:
+    - fields: text
+      status_error: true
+      error: Please this is a required field.
+      label: First Name
+      placehoder: Please enter first name
+      width_fields: 1/2
+    - fields: tel
+      status_error: true
+      error: Please this is a required field.
+      label: Phone Number
+      placehoder: Please enter phone number
+      width_fields: 1/2
+    - fields: email
+      status_error: true
+      error: Please this is a required field.
+      label: Email
+      placehoder: Please enter email
+      width_fields: full
+    - fields: textarea
+      status_error: true
+      error: Please this is a required field.
+      label: Message
+      placehoder: Please enter message
+      width_fields: full
+    - fields: file
+      status_error: true
+      error: Please this is a required field.
+      label: Attachments 2 (for Resume, References, etc)
+      placehoder: PNG, JPG or PDF, smaller than 15MB dasds
+      width_fields: full
+    - fields: file
+      status_error: true
+      error: Please this is a required field.
+      label: Attachments 2 (for Resume, References, etc)
+      placehoder: PNG, JPG or PDF, smaller than 15MB dasds
+      width_fields: full
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -65,17 +65,14 @@ preview:
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
   title:
-    type: text
+    type: markdown
     label: Title
   sub_title:
-    type: text
+    type: markdown
     label: Sub Title
   background_color:
     type: color
     label: Background Color
-  title_button:
-    type: text
-    label: Title Button Text
   address:
     type: text
     label: Address
@@ -85,23 +82,22 @@ _inputs:
   phone:
     type: text
     label: Phone Number
-
-  form.title:
-    type: text
+  title_form:
+    type: markdown
     label: Form Title
-  form.background_color:
+  background_color_form:
     type: color
     label: Form Background Color
-  form.color:
+  color_form:
     type: color
     label: Form Text Color
-  form.background_color_btn:
+  background_color_btn:
     type: color
     label: Form Button Background Color
-  form.color_btn:
+  color_btn:
     type: color
     label: Form Button Text Color
-  form.list_fields[*].fields:
+  list_fields[*].fields:
     label: Type Fields
     type: select
     description:
@@ -111,19 +107,19 @@ _inputs:
       - email
       - tel
       - file
-  form.list_fields[*].error:
+  list_fields[*].error:
     label: Text Required
     type: text
-  form.list_fields[*].status_error:
+  list_fields[*].status_error:
     label: Required
     type: toggle
-  form.list_fields[*].label:
+  list_fields[*].label:
     label: Label
     type: text
-  form.list_fields[*].placehoder:
+  list_fields[*].placehoder:
     label: Placehoder
     type: text
-  form.list_fields[*].width_fields:
+  list_fields[*].width_fields:
     label: Width Fields
     type: select
     options:

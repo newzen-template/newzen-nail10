@@ -48,17 +48,19 @@
           <div
             class="card shadow-sm border-0"
             :style="{
-              backgroundColor: block.form?.background_color,
-              color: block.form?.color,
+              backgroundColor: block.background_color_form,
+              color: block.color_form,
               padding: '45px',
             }"
           >
-            <h2 v-if="block.form?.title" class="mb-3">
-              {{ block.form.title }}
-            </h2>
-            <div v-if="block.form" class="row g-3">
+            <h2
+              v-if="block.title"
+              class="mb-3 ckeditor-custom"
+              v-html="block.title_form"
+            ></h2>
+            <div v-if="block.list_fields" class="row g-3">
               <div
-                v-for="(item, key) in block.form.list_fields"
+                v-for="(item, key) in block.list_fields"
                 :key="key"
                 :class="{
                   'col-md-6': item.width_fields === '1/2',
@@ -457,11 +459,18 @@
                 type="submit"
                 class="btn rounded-pill px-4 py-2 w-100"
                 :style="{
-                  backgroundColor: block.form?.background_color_btn,
-                  color: block.form?.color_btn,
+                  backgroundColor: block.background_color_btn,
+                  color: block.color_btn,
                 }"
+                :disabled="isLoadingButton"
               >
                 {{ block.button?.text_button || 'Send Message' }}
+                <span
+                  v-if="isLoadingButton"
+                  class="spinner-border spinner-border-sm ms-2"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
               </button>
             </div>
           </div>
@@ -510,7 +519,6 @@ if (dataJson?.length > 0) {
 
 // Base URL for API calls
 const BASE_URL = 'https://contact-form-api.nz-service01.dtsmart.dev';
-console.log(props.block.form.list_fields);
 
 // Form token
 const form_token = btoa(props.block.title || 'Contact Form');
@@ -541,8 +549,8 @@ const percentCompleteUploadFile = reactive<Record<string, any>>({});
 
 // Initialize form state
 const convertFormstate = () => {
-  if (props.block.form?.list_fields) {
-    props.block.form.list_fields.forEach((item: any, indexForm: number) => {
+  if (props.block.list_fields) {
+    props.block.list_fields.forEach((item: any, indexForm: number) => {
       formState[indexForm] = {
         value: '',
         type: item.fields,
@@ -776,7 +784,9 @@ const validateForm = () => {
   for (const key in formState) {
     if (formState.hasOwnProperty(key)) {
       const item = formState[key];
-      if (item?.status_error) {
+      const formField = props.block.list_fields?.[Number(key)];
+
+      if (formField?.status_error) {
         // Skip validation for file fields
         if (item.type === 'file') {
           fieldError[key] = false;
@@ -910,20 +920,20 @@ const onSubmit = async () => {
     for (const key in formState) {
       if (formState.hasOwnProperty(key)) {
         const item = formState[key];
-        const formField = props.block.form?.list_fields?.[Number(key)];
+        const formField = props.block.list_fields?.[Number(key)];
 
         if (formField) {
           if (Array.isArray(item.value)) {
             // Handle file arrays
             data_submission.push({
-              name: formField.label || `Field ${Number(key) + 1}`,
+              name: formField.label,
               type: item.type,
               value: item.value,
             });
           } else if (item.value || item.value === '') {
             // Handle text values
             data_submission.push({
-              name: formField.label || `Field ${Number(key) + 1}`,
+              name: formField.label,
               type: item.type,
               value: item.value,
             });
@@ -933,7 +943,7 @@ const onSubmit = async () => {
     }
 
     const body = {
-      form_name: 'Contact Form',
+      form_name: props.block.title_form || 'Contact Form',
       tenant_id: tenant_id.value,
       form_token: form_token,
       data_submission: data_submission,
@@ -978,7 +988,7 @@ const closePopup = () => {
 
 // Initialize form state when component loads or form structure changes
 watch(
-  () => props.block.form,
+  () => props.block.list_fields,
   () => {
     convertFormstate();
   },
@@ -1108,5 +1118,59 @@ textarea.form-control {
   .contact-item {
     margin-bottom: 2rem;
   }
+}
+
+/* Add loading spinner styles */
+.spinner-border {
+  width: 1rem;
+  height: 1rem;
+  border-width: 0.15em;
+}
+
+/* Improve form field styles */
+.form-control {
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #dee2e6;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.form-control.border-danger {
+  border-color: #dc3545;
+}
+
+.form-control.border-danger:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+/* Improve file upload area */
+.border-dashed {
+  border: 2px dashed #dee2e6;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.border-dashed:hover {
+  border-color: #86b7fe;
+}
+
+/* Improve error message styling */
+.form-text.text-danger {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Improve button styles */
+.btn {
+  transition: all 0.15s ease-in-out;
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
 }
 </style>
