@@ -40,21 +40,23 @@ content_blocks:
         content: (919) 336-9999
         link: '/'
     form:
-      status: true
       title: Send us a message
       background_color: '#fff'
+      color: '#000'
+      background_color_btn: '#000'
+      color_btn: '#fff'
       list_fields:
         - fields: text
           status_error: true
           error: Please this is a required field.
-          label: First Name
-          placehoder: Please enter first name
+          label: Name
+          placehoder: Please enter name
           width_fields: 1/2
-        - fields: text
+        - fields: tel
           status_error: true
           error: Please this is a required field.
-          label: Last Name
-          placehoder: Please enter last name
+          label: Phone
+          placehoder: Please enter phone number
           width_fields: 1/2
         - fields: email
           status_error: true
@@ -62,21 +64,15 @@ content_blocks:
           label: Email
           placehoder: Please enter email
           width_fields: full
-        - fields: tel
-          status_error: true
-          error: Please this is a required field.
-          label: Phone Number
-          placehoder: Please enter phone number
-          width_fields: full
         - fields: textarea
           status_error: true
           error: Please this is a required field.
           label: Message
           placehoder: Please enter message
           width_fields: full
-        - fields: file
-          status_error: true
-          error: Please this is a required field.
-          label: Attachments 2 (for Resume, References, etc)
-          placehoder: PNG, JPG or PDF, smaller than 15MB dasds
-          width_fields: full
+        # - fields: file
+        #   status_error: true
+        #   error: Please this is a required field.
+        #   label: Attachments 2 (for Resume, References, etc)
+        #   placehoder: PNG, JPG or PDF, smaller than 15MB dasds
+        #   width_fields: full

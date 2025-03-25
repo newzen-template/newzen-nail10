@@ -8,7 +8,8 @@
         : 'none',
     }"
     :data-cms-bind="dataBinding"
-    class="py-4 bg-cover bg-center"
+    class="bg-cover bg-center"
+    style="padding: 100px 0"
   >
     <div class="container-md">
       <div class="row">
@@ -45,9 +46,12 @@
         <!-- Right Column - Contact Form -->
         <div class="col-md-6">
           <div
-            :status="block.form?.status"
-            class="card shadow-sm p-4 border-0"
-            :style="{ backgroundColor: block.form?.background_color }"
+            class="card shadow-sm border-0"
+            :style="{
+              backgroundColor: block.form?.background_color,
+              color: block.form?.color,
+              padding: '45px',
+            }"
           >
             <h2 v-if="block.form?.title" class="mb-3">
               {{ block.form.title }}
@@ -68,8 +72,7 @@
                     }}<span
                       class="text-danger ms-1 fw-light fs-6"
                       v-if="item.status_error"
-                      >*</span
-                    >
+                    ></span>
                   </label>
                   <input
                     :type="item.field"
@@ -102,8 +105,7 @@
                     }}<span
                       class="text-danger ms-1 fw-light fs-6"
                       v-if="item.status_error"
-                      >*</span
-                    >
+                    ></span>
                   </label>
                   <input
                     type="email"
@@ -140,8 +142,7 @@
                     }}<span
                       class="text-danger ms-1 fw-light fs-6"
                       v-if="item.status_error"
-                      >*</span
-                    >
+                    ></span>
                   </label>
                   <input
                     type="tel"
@@ -180,8 +181,7 @@
                     }}<span
                       class="text-danger ms-1 fw-light fs-6"
                       v-if="item.status_error"
-                      >*</span
-                    >
+                    ></span>
                   </label>
                   <textarea
                     rows="5"
@@ -214,8 +214,7 @@
                     }}<span
                       class="text-danger ms-1 fw-light fs-6"
                       v-if="item.status_error"
-                      >*</span
-                    >
+                    ></span>
                   </label>
                   <div
                     @dragover.prevent
@@ -456,7 +455,11 @@
               <button
                 @click="onSubmit"
                 type="submit"
-                class="btn btn-dark rounded-pill px-4 py-2"
+                class="btn rounded-pill px-4 py-2 w-100"
+                :style="{
+                  backgroundColor: block.form?.background_color_btn,
+                  color: block.form?.color_btn,
+                }"
               >
                 {{ block.button?.text_button || 'Send Message' }}
               </button>
